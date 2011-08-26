@@ -27,6 +27,10 @@ main = hakyllWith config $ do
     compile $ pageCompiler >>> applyTemplateCompiler "bare.mt"
                            >>> relativizeUrlsCompiler
 
+  match "pages/*.jpg" $ do
+    route upDirRoute
+    compile copyFileCompiler
+
 -- | Route which uses @upDir'@ to chop off the top-level directory during routing.
 --
 -- >>> route upDirRoute
