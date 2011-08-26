@@ -12,6 +12,9 @@
 import Hakyll
 import Control.Arrow
 import System.FilePath
+import Data.Monoid
+
+
 
 config :: HakyllConfiguration
 config = defaultHakyllConfiguration {
@@ -38,6 +41,14 @@ main = hakyllWith config $ do
   match "pages/*.jpg" $ do
     route upDirRoute
     compile copyFileCompiler
+
+  -- create empty favicon.ico and robots.txt (for performance on NearlyFreeSpeech)
+  match "favicon.ico" $ route idRoute
+  create "favicon.ico" $ (constA mempty :: Compiler () String)
+  match "favicon.ico" $ route idRoute
+  create "favicon.ico" $ (constA mempty :: Compiler () String)
+
+
 
 -- | Route which uses @upDir'@ to chop off the top-level directory during routing.
 --
