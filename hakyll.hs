@@ -14,8 +14,6 @@ config = defaultHakyllConfiguration {
 main = hakyllWith config $ do
 
 -- Ensure CSS files receive no special treatment.
-
   match "*.css" $ do
     route idRoute
-    compile compressCssCompiler
     compile copyFileCompiler
