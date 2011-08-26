@@ -1,6 +1,12 @@
 -- Hakyll script for building http://alex.hirzel.us
--- Alexander Hirzel, August, 2011
--- Examples: https://github.com/jaspervdj/hakyll-examples
+-- Alexander Hirzel <alex@hirzel.us>
+-- August, 2011
+
+-- Resources:
+--   https://github.com/jaspervdj/hakyll-examples
+
+-- Areas of future work:
+--   https://groups.google.com/d/topic/hakyll/p-zk3MFQ_ts/discussion
 
 {-# LANGUAGE OverloadedStrings #-}
 import Hakyll
@@ -13,9 +19,10 @@ config = defaultHakyllConfiguration {
   destinationDirectory = "htdocs"
 }
 
+
+
 main = hakyllWith config $ do
 
--- Ensure CSS files receive no special treatment.
   match "*.css" $ do
     route idRoute
     compile copyFileCompiler
