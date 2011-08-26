@@ -12,7 +12,7 @@ TEMPLATES: $(wildcard *.mt)
 
 # actions
 deploy: build
-	#rsync -rv htdocs/ nfsn:/home/public
+	rsync -rv htdocs/ nfsn:/home/public
 
 build: hakyll PAGES TEMPLATES
 	${hakyll} rebuild
