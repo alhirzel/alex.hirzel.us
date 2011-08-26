@@ -25,7 +25,7 @@ cl clean: hakyll
 
 
 # build commands for the hakyll script
-hakyll: hakyll.lhs
+hakyll: hakyll.hs
 	ghc --make hakyll.hs
 	rm -f hakyll.o hakyll.hi
 	${hakyll} clean
