@@ -6,10 +6,16 @@ Examples: https://github.com/jaspervdj/hakyll-examples
 
 > {-# LANGUAGE OverloadedStrings #-}
 > import Hakyll
+> import Control.Arrow
+
+> config :: HakyllConfiguration
+> config = defaultHakyllConfiguration {
+>   destinationDirectory = "htdocs"
+> }
 
 blah
 
-> main = hakyll $ do
+> main = hakyllWith config $ do
 
 Ensure CSS files receive no special treatment.
 
