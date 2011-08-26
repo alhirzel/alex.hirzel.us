@@ -17,3 +17,12 @@ main = hakyllWith config $ do
   match "*.css" $ do
     route idRoute
     compile copyFileCompiler
+
+  match "*.mt" $ do
+    compile templateCompiler
+
+  match "pages/*.page" $ do
+    route $ (gsubRoute "pages/" (const "")) `composeRoutes` setExtension ".html"
+    compile $ pageCompiler
+      >>> applyTemplateCompiler "bare.mt"
+      >>> relativizeUrlsCompiler
