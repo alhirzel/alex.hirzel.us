@@ -16,10 +16,10 @@ up update: build
 	#rsync -rv htdocs/ nfsn:/home/public
 
 bu build: hakyll PAGES TEMPLATES
-	${hakyll} build
+	${hakyll} rebuild
 
-cl clean: hakyll
-	${hakyll} clean
+cl clean:
+	-${hakyll} clean
 	rm -f ${hakyll}
 
 
@@ -28,7 +28,6 @@ cl clean: hakyll
 hakyll: hakyll.hs
 	ghc --make hakyll.hs
 	rm -f hakyll.o hakyll.hi
-	${hakyll} clean
 
 
 
