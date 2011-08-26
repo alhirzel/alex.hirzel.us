@@ -9,6 +9,7 @@ import System.FilePath
 
 config :: HakyllConfiguration
 config = defaultHakyllConfiguration {
+  deployCommand = "make deploy",
   destinationDirectory = "htdocs"
 }
 
