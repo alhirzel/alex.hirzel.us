@@ -5,6 +5,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 import Hakyll
 import Control.Arrow
+import System.FilePath
 
 config :: HakyllConfiguration
 config = defaultHakyllConfiguration {
@@ -22,7 +23,27 @@ main = hakyllWith config $ do
     compile templateCompiler
 
   match "pages/*.page" $ do
-    route $ (gsubRoute "pages/" (const "")) `composeRoutes` setExtension ".html"
-    compile $ pageCompiler
-      >>> applyTemplateCompiler "bare.mt"
-      >>> relativizeUrlsCompiler
+    route $ upDirRoute `composeRoutes` setExtension ".html"
+    compile $ pageCompiler >>> applyTemplateCompiler "bare.mt"
+                           >>> relativizeUrlsCompiler
+
+-- | Route which uses @upDir'@ to chop off the top-level directory during routing.
+--
+-- >>> route upDirRoute
+--
+-- >>> route $ upDirRoute `composeRoutes` upDirRoute
+upDirRoute :: Routes
+upDirRoute = customRoute $ upDir . toFilePath
+
+-- | Chops off the top-level directory from a @FilePath@.
+--
+-- >>> upDir' "/foo/bar/baz"
+-- "/bar/baz"
+--
+-- >>> upDir' "foo/bar/baz"
+-- "bar/baz"
+upDir :: FilePath -> FilePath
+upDir = joinPath . dropTopDir . splitDirectories
+  where
+    dropTopDir ("/":x2:xs) = "/" : tail xs
+    dropTopDir (x1 :x2:xs) = x2:xs
