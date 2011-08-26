@@ -11,14 +11,13 @@ TEMPLATES: $(wildcard *.mt)
 
 
 # actions
-# TODO: write this
-up update: build
+deploy: build
 	#rsync -rv htdocs/ nfsn:/home/public
 
-bu build: hakyll PAGES TEMPLATES
+build: hakyll PAGES TEMPLATES
 	${hakyll} rebuild
 
-cl clean:
+clean:
 	-${hakyll} clean
 	rm -f ${hakyll}
 
