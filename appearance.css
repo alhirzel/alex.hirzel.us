@@ -1,0 +1,32 @@
+
+/* colors */
+.sidebar, #top-navigation {
+	background-color: #cfdfef;
+}
+
+#body-inner {
+	background-color: white;
+}
+
+.clearer { clear: both; }
+.clearer * { display: none; }
+
+/* DEBUGGING
+ * *
+.panel { background-color: green; }
+.left .panel { background-color: red; }
+.right .panel { background-color: blue; }
+.sidebar { background-color: purple; }
+/*
+*/
+
+#title-block {
+	height: 10ex;
+}
+#title-block .padding {
+	font-size: 200%;
+	font-weight: bold;
+	text-align: right;
+	font-family: "Arial", sans-serif;
+}
+

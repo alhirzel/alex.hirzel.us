@@ -1,0 +1,65 @@
+/* layout.css
+ * ==========
+ *
+ * Author: Alexander Hirzel <alex@hirzel.us>
+ *
+ *
+ * Abstract
+ * --------
+ * This stylesheet provides general rules to allow a document to have multiple
+ * columns. This enables the designer to have much more freedom in placing
+ * elements--there is no longer a limit to the choice between left and right!
+ *
+ *
+ * How to use this stylesheet
+ * --------------------------
+ * In order to use these layout rules, content must be properly placed into
+ * a hierarchy of <div> elements. Several hierarchies are possible. For each,
+ * the top-level container is either (nothing), div.double or div.triple. The
+ * requirements for each are as follows:
+ *
+ *   - (none)     - divides page into a wider main part and sidebar. Contains a
+ *                  div.panel and a div.sidebar (one of each), inside either a
+ *                  div.right or div.left (one of each);
+ *
+ *   - div.double - divides the page in half. Contains a div.left and a
+ *                  div.right, each with child div.panel's;
+ *
+ *   - div.triple - divides the page into thirds. Contains a div.left,
+ *                  div.center and div.right, each with child div.panel's.
+ *
+ * The div.left and div.right containers may contain a div.padding, which adds
+ * a pattern that is consistent site-wide.
+ *
+ */
+
+/* cleanse the margins so we don't have to worry about a stray */
+html, body, div.panel, div.sidebar,
+	div.left, div.right { margin: 0; padding: 0; }
+
+/* normal panel-sidebar layout */
+#body-inner, .panel, .triple { width: 50em; }  /* page width */
+.left .panel, .right .panel  { width: 36em; }  /* panel (larger) size */
+.sidebar                     { width: 14em; }  /* sidebar (smaller) size */
+
+/* equal division layouts */
+.double .left .panel,
+.double .right .panel        { width: 25em; }       /* halves */
+.triple .left .panel,
+.triple .center .panel,
+.triple .right .panel        { width: 16.666666666666em; }   /* thirds */
+
+/* center the whole page */
+#body-inner { margin: 0 auto; }
+
+/* different layout sections */
+.left            { float: left; clear: both; }
+.right           { float: right; }
+.panel, .sidebar { clear: both; }
+.double, .triple { clear: both; }
+.triple .center .panel { clear: none; margin: 0 auto; }
+
+/* provide a standard padding, can override later */
+.panel .padding,
+.sidebar .padding { padding: 0.25ex 0.25em; }
+

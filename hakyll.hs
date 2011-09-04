@@ -35,7 +35,7 @@ main = hakyllWith config $ do
 
   match "pages/*.page" $ do
     route $ upDirRoute `composeRoutes` setExtension ".html"
-    compile $ pageCompiler >>> applyTemplateCompiler "bare.mt"
+    compile $ pageCompiler >>> applyTemplateCompiler "default.mt"
                            >>> relativizeUrlsCompiler
 
   match "pages/*.jpg" $ do
