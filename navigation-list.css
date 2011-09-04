@@ -1,0 +1,44 @@
+
+/* HORIZONTAL NAVIGATION BARS */
+
+/* cleanse margins so we don't have to worry about stray space */
+#top-navigation > .padding, /* XXX shouldn't be here */
+ul.horizontal-navigation,
+ul.horizontal-navigation ul,
+ul.horizontal-navigation li {
+	margin: 0;
+	padding: 0;
+}
+
+/* styles for all items */
+ul.horizontal-navigation li {
+	list-style-type: none;
+}
+ul.horizontal-navigation li .padding {
+	padding: 0.5ex 0.5em;
+}
+
+/* styles for first level (cancel for deeper) */
+ul.horizontal-navigation li { float: left; }
+ul.horizontal-navigation li li { float: none; }
+
+/* styles for second level and deeper */
+ul.horizontal-navigation li ul { display: none; }
+ul.horizontal-navigation li:hover ul {
+	display: block;
+	position: absolute;
+	z-index: 20;
+}
+
+/* styles for third level and deeper (discouraged) */
+ul.horizontal-navigation li li .padding { padding: 0.5ex 0.5em; }
+ul.horizontal-navigation li li ul {
+	display: block;
+	position: static;
+	padding-left: 3em;
+}
+ul.horizontal-navigation li ul {
+	background-color: #6666ff;
+}
+
+#top-navigation hr { clear: both; width: 0; }
