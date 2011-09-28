@@ -27,5 +27,10 @@ tmux
 
 FreeBSD
 
+Web2PDFConvert.com - this is distinct from the other web-based HTML-to-PDF
+converters I have used because it treats HTML anchors correctly (i.e. generates
+a link within the PDF which goes to a different page rather than to the
+website).
+
 PDF-Shuffler
   ~ http://sourceforge.net/projects/pdfshuffler/
