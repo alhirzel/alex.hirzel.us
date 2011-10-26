@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>$title$</title>
+    <meta charset="utf-8">
     <meta name="author" href="$author$" />
     <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
 <!--[if IE 6]>
