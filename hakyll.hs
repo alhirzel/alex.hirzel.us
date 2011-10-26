@@ -13,6 +13,7 @@ import Hakyll
 import Control.Arrow
 import System.FilePath
 import Data.Monoid
+import Text.Pandoc
 
 
 
@@ -22,6 +23,12 @@ config = defaultHakyllConfiguration {
   destinationDirectory = "htdocs"
 }
 
+
+-- TODO: add something here to populate siteKeys
+bestCompilerEver =
+  pageCompilerWith defaultParserState defaultWriterOptions >>>
+  applyTemplateCompiler "default.mt" >>>
+  relativizeUrlsCompiler
 
 
 main = hakyllWith config $ do
@@ -35,8 +42,7 @@ main = hakyllWith config $ do
 
   match "pages/*.page" $ do
     route $ upDirRoute `composeRoutes` setExtension ".html"
-    compile $ pageCompiler >>> applyTemplateCompiler "default.mt"
-                           >>> relativizeUrlsCompiler
+    compile bestCompilerEver
 
   match "pages/*.jpg" $ do
     route upDirRoute
