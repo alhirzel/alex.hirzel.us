@@ -4,6 +4,7 @@
     <title>$title$</title>
     <meta charset="utf-8">
     <meta name="author" href="$author$" />
+    <meta name="generator" href="Awesome custom software by Alex" />
     <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
 <!--[if IE 6]>
 <style type="text/css">
