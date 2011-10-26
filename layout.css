@@ -38,6 +38,7 @@ html, body, div.panel, div.sidebar,
 	div.left, div.right { margin: 0; padding: 0; }
 
 /* normal panel-sidebar layout */
+/* |            panel           |   sidebar    | */
 #body-inner, .panel, .triple { width: 50em; }  /* page width */
 .left .panel, .right .panel  { width: 36em; }  /* panel (larger) size */
 .sidebar                     { width: 14em; }  /* sidebar (smaller) size */
