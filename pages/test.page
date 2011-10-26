@@ -1,0 +1,99 @@
+<h1>Test page</h1>
+<p>This is the page Alex keeps around to test his rapidly-growing library of CSS.</p>
+
+<hr>
+
+<div class="double">
+<div class="left">
+<div class="panel" style="background-color: red"><div class="padding">
+LEFT
+</div></div>
+<div class="panel" style="background-color: red"><div class="padding">
+LEFT
+</div></div>
+</div>
+<div class="right">
+<div class="panel" style="background-color: blue"><div class="padding">
+RIGHT
+</div></div>
+<div class="panel" style="background-color: blue"><div class="padding">
+RIGHT
+</div></div>
+<div class="panel" style="background-color: blue"><div class="padding">
+RIGHT
+</div></div>
+</div>
+</div>
+
+
+<div class="triple"><div class="padding">
+<div class="left">
+<div class="panel" style="background-color: red"><div class="padding">
+LEFT
+</div></div>
+<div class="panel" style="background-color: red"><div class="padding">
+LEFT
+</div></div>
+</div>
+<div class="right">
+<div class="panel" style="background-color: blue"><div class="padding">
+RIGHT
+</div></div>
+<div class="panel" style="background-color: blue"><div class="padding">
+RIGHT
+</div></div>
+<div class="panel" style="background-color: blue"><div class="padding">
+RIGHT
+</div></div>
+</div>
+<div class="center">
+<div class="panel" style="background-color: green"><div class="padding">
+CENTER
+</div></div>
+<div class="panel" style="background-color: green"><div class="padding">
+CENTER
+</div></div>
+<div class="panel" style="background-color: green"><div class="padding">
+CENTER
+</div></div>
+</div>
+</div></div>
+
+<div class="panel"><div class="padding">
+Generic testing:
+</div></div>
+
+<div class="left">
+<div class="sidebar"><div class="padding">left sidebar</div></div>
+</div>
+<div class="right">
+<div class="sidebar"><div class="padding">right sidebar</div></div>
+</div>
+
+<div class="clearer"><hr></div>
+
+<div class="left">
+<div class="panel"><div class="padding">left panel</div></div>
+</div>
+<div class="right">
+<div class="panel"><div class="padding">right panel</div></div>
+</div>
+
+<div class="clearer"><hr></div>
+
+<div class="left">
+<div class="sidebar"><div class="padding">left sidebar</div></div>
+</div>
+<div class="right">
+<div class="panel"><div class="padding">right panel</div></div>
+</div>
+
+<div class="clearer"><hr></div>
+
+<div class="left">
+<div class="panel"><div class="padding">left panel</div></div>
+</div>
+<div class="right">
+<div class="sidebar"><div class="padding">right sidebar</div></div>
+</div>
+
