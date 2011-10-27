@@ -44,6 +44,10 @@ main = hakyllWith config $ do
     route $ upDirRoute `composeRoutes` setExtension ".html"
     compile bestCompilerEver
 
+  match "pages/*.tex" $ do
+    route $ upDirRoute `composeRoutes` setExtension ".html"
+    compile bestCompilerEver
+
   match "pages/*.jpg" $ do
     route upDirRoute
     compile copyFileCompiler
