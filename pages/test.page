@@ -1,7 +1,9 @@
 <h1>Test page</h1>
 <p>This is the page Alex keeps around to test his rapidly-growing library of CSS.</p>
 
-<hr>
+
+<h3>Horizontal Navigation</h3>
+
 <ul class="horizontal-navigation">
   <li><div class="padding"><a href="#">Item 1</a></div></li>
   <li><div class="padding"><a href="#">Item 2</a></div>
@@ -19,100 +21,203 @@
     </ul>
   </li>
   <li><div class="padding"><a href="#">Item 3</a></div></li>
+  <li><div class="padding"><a href="#">Item 4</a></div></li>
+  <li><div class="padding"><a href="#">Item 5</a></div></li>
+  <li><div class="padding"><a href="#">Item 6</a></div></li>
 </ul>
+<span></span>
+
+
+
+<h3>Multicolumn (two)</h3>
+
+<div class="multicolumn two">
+  <div class="left">
+    <div class="panel" style="background-color: red"><div>
+      one/one
+    </div></div>
+  </div>
+  <div class="right">
+    <div class="panel" style="background-color: blue"><div>
+      one/two
+    </div></div>
+    <div class="panel" style="background-color: blue"><div>
+      two/two
+    </div></div>
+  </div>
+  <span></span>
+</div>
+
 <hr>
 
-<div class="double">
-<div class="left">
-<div class="panel" style="background-color: red"><div class="padding">
-LEFT
-</div></div>
-<div class="panel" style="background-color: red"><div class="padding">
-LEFT
-</div></div>
-</div>
-<div class="right">
-<div class="panel" style="background-color: blue"><div class="padding">
-RIGHT
-</div></div>
-<div class="panel" style="background-color: blue"><div class="padding">
-RIGHT
-</div></div>
-<div class="panel" style="background-color: blue"><div class="padding">
-RIGHT
-</div></div>
-</div>
+<div class="multicolumn two">
+  <div class="left">
+    <div class="panel" style="background-color: red"><div>
+      one/two
+    </div></div>
+    <div class="panel" style="background-color: red"><div>
+      two/two
+    </div></div>
+  </div>
+  <div class="right">
+    <div class="panel" style="background-color: blue"><div>
+      one/one
+    </div></div>
+  </div>
+  <span></span>
 </div>
 
 
-<div class="triple"><div class="padding">
-<div class="left">
-<div class="panel" style="background-color: red"><div class="padding">
-LEFT
-</div></div>
-<div class="panel" style="background-color: red"><div class="padding">
-LEFT
-</div></div>
-</div>
-<div class="right">
-<div class="panel" style="background-color: blue"><div class="padding">
-RIGHT
-</div></div>
-<div class="panel" style="background-color: blue"><div class="padding">
-RIGHT
-</div></div>
-<div class="panel" style="background-color: blue"><div class="padding">
-RIGHT
-</div></div>
-</div>
-<div class="center">
-<div class="panel" style="background-color: green"><div class="padding">
-CENTER
-</div></div>
-<div class="panel" style="background-color: green"><div class="padding">
-CENTER
-</div></div>
-<div class="panel" style="background-color: green"><div class="padding">
-CENTER
-</div></div>
-</div>
-</div></div>
 
-<div class="panel"><div class="padding">
-Generic testing:
-</div></div>
+<h3>Multicolumn (three)</h3>
 
-<div class="left">
-<div class="sidebar"><div class="padding">left sidebar</div></div>
-</div>
-<div class="right">
-<div class="sidebar"><div class="padding">right sidebar</div></div>
+<div class="multicolumn three">
+  <div class="left">
+    <div class="panel" style="background-color: red"><div>
+      one/one
+    </div></div>
+  </div>
+  <div class="right">
+    <div class="panel" style="background-color: blue"><div>
+      one/two
+    </div></div>
+    <div class="panel" style="background-color: blue"><div>
+      two/two
+    </div></div>
+  </div>
+  <div class="center">
+    <div class="panel" style="background-color: green"><div>
+      one/one
+    </div></div>
+  </div>
+  <span></span>
 </div>
 
-<div class="clearer"><hr></div>
+<hr>
 
-<div class="left">
-<div class="panel"><div class="padding">left panel</div></div>
-</div>
-<div class="right">
-<div class="panel"><div class="padding">right panel</div></div>
+<div class="multicolumn three">
+  <div class="left">
+    <div class="panel" style="background-color: red"><div>
+      one/one
+    </div></div>
+  </div>
+  <div class="right">
+    <div class="panel" style="background-color: blue"><div>
+      one/one
+    </div></div>
+  </div>
+  <div class="center">
+    <div class="panel" style="background-color: green"><div>
+      one/two
+    </div></div>
+    <div class="panel" style="background-color: green"><div>
+      two/two
+    </div></div>
+  </div>
+  <span></span>
 </div>
 
-<div class="clearer"><hr></div>
+<hr>
 
-<div class="left">
-<div class="sidebar"><div class="padding">left sidebar</div></div>
-</div>
-<div class="right">
-<div class="panel"><div class="padding">right panel</div></div>
+<div class="multicolumn three">
+  <div class="left">
+    <div class="panel" style="background-color: red"><div>
+      one/two
+    </div></div>
+    <div class="panel" style="background-color: red"><div>
+      two/two
+    </div></div>
+  </div>
+  <div class="right">
+    <div class="panel" style="background-color: blue"><div>
+      one/one
+    </div></div>
+  </div>
+  <div class="center">
+    <div class="panel" style="background-color: green"><div>
+      one/one
+    </div></div>
+  </div>
+  <span></span>
 </div>
 
-<div class="clearer"><hr></div>
 
-<div class="left">
-<div class="panel"><div class="padding">left panel</div></div>
+
+<h3>Left sidebar</h3>
+
+<div class="sidebar">
+  <div class="left sidebar">
+    <div class="panel" style="background-color: red"><div>
+      one/one
+    </div></div>
+  </div>
+  <div class="right big">
+    <div class="panel" style="background-color: blue"><div>
+      one/two
+    </div></div>
+    <div class="panel" style="background-color: blue"><div>
+      two/two
+    </div></div>
+  </div>
+  <span></span>
 </div>
-<div class="right">
-<div class="sidebar"><div class="padding">right sidebar</div></div>
+
+<hr>
+
+<div class="sidebar">
+  <div class="left sidebar">
+    <div class="panel" style="background-color: red"><div>
+      one/two
+    </div></div>
+    <div class="panel" style="background-color: red"><div>
+      two/two
+    </div></div>
+  </div>
+  <div class="right big">
+    <div class="panel" style="background-color: blue"><div>
+      one/one
+    </div></div>
+  </div>
+  <span></span>
+</div>
+
+
+
+<h3>Right sidebar</h3>
+
+<div class="sidebar">
+  <div class="right sidebar">
+    <div class="panel" style="background-color: blue"><div>
+      one/one
+    </div></div>
+  </div>
+  <div class="left big">
+    <div class="panel" style="background-color: red"><div>
+      one/two
+    </div></div>
+    <div class="panel" style="background-color: red"><div>
+      two/two
+    </div></div>
+  </div>
+  <span></span>
+</div>
+
+<hr>
+
+<div class="sidebar">
+  <div class="right sidebar">
+    <div class="panel" style="background-color: blue"><div>
+      one/two
+    </div></div>
+    <div class="panel" style="background-color: blue"><div>
+      two/two
+    </div></div>
+  </div>
+  <div class="left big">
+    <div class="panel" style="background-color: red"><div>
+      one/one
+    </div></div>
+  </div>
+  <span></span>
 </div>
 
