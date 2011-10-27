@@ -15,13 +15,14 @@
 .sidebar { background-color: purple; }
 */
 
-#title-block {
-	height: 10ex;
-}
-#title-block .padding {
-	font-size: 200%;
+h1 {
+	margin: 0;
+	padding: 20px 10px;
+
+	background-color: red;
+	font-size: 180%;
 	font-weight: bold;
-	text-align: right;
-	font-family: "Arial", sans-serif;
+	text-align: center;
+	font-family: "Helvetica", sans-serif;
 }
 

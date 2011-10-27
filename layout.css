@@ -11,6 +11,22 @@
  * elements.
  *
  *
+ * How to structure the document
+ * -----------------------------
+ * The <body> element must contain div#body-inner only. Each #top-navigation >
+ * ul > li must contain a div.padding.
+ *
+ * Width is set on .panel.
+ * Only div.panels MUST immediately contain only a dummy div.
+ *
+ * Padding is to be set by .panel.padded
+ *
+ * The following elements must have an empty <span></span> as the last child:
+ *   - div.multicolumn
+ *   - div.sidebar
+ *   - ul.horizontal-navigation    - must have <li></li>
+ *
+ *
  * How to use this stylesheet
  * --------------------------
  * In order to use these layout rules, content must be properly placed into
@@ -34,33 +50,45 @@
  */
 
 /* cleanse the margins so we don't have to worry about a stray */
-html, body, div.panel, div.sidebar,
-	div.left, div.right { margin: 0; padding: 0; }
-
-/* normal panel-sidebar layout */
-/* |            panel           |   sidebar    | */
-#body-inner, .panel, .triple { width: 50em; }  /* page width */
-.left .panel, .right .panel  { width: 36em; }  /* panel (larger) size */
-.sidebar                     { width: 14em; }  /* sidebar (smaller) size */
-
-/* equal division layouts */
-.double .left .panel,
-.double .right .panel        { width: 25em; }       /* halves */
-.triple .left .panel,
-.triple .center .panel,
-.triple .right .panel        { width: 16.666666666666em; }   /* thirds */
+html, body, div { margin: 0; padding: 0; }
+html, body { height: 100%; }
 
 /* center the whole page */
 #body-inner { margin: 0 auto; }
 
-/* different layout sections */
-.left            { float: left; clear: both; }
-.right           { float: right; }
-.panel, .sidebar { clear: both; }
-.double, .triple { clear: both; }
-.triple .center .panel { clear: none; margin: 0 auto; }
+.panel.padded > div {
+	padding: 0.15in;
+}
 
-/* provide a standard padding, can override later */
-.panel .padding,
-.sidebar .padding { padding: 0.25ex 0.25em; }
+/* Cool CS3 trick: an empty <span> at the end of a div will clear */
+* + span:empty {
+	clear: both;
+	display: block;
+}
+
+
+
+/* Multi-column structural definitions
+ * -----------------------------------
+ */
+
+#body-inner { width: 50em; }
+
+/* sizes */
+.multicolumn.two   > .left   > .panel,
+.multicolumn.two   > .right  > .panel { width: 25em; }
+
+.multicolumn.three > .left   > .panel,
+.multicolumn.three > .center > .panel,
+.multicolumn.three > .right  > .panel { width: 16.666666666666em; }
+
+/* behavior */
+.multicolumn       > .left   { float: left; }
+.multicolumn       > .center { margin: 0 33.333333333333%; }
+.multicolumn       > .right  { float: right; }
+
+.sidebar           > .sidebar > .panel { width: 14em; }
+.sidebar           > .big     > .panel { width: 36em; }
+.sidebar           > .left   { float: left; }
+.sidebar           > .right  { float: right; }
 

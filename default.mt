@@ -17,25 +17,17 @@
     <link href="/appearance.css"      rel="stylesheet" title="Alex's default" type="text/css" />
     <!-- include Mootools if necessary-->
   </head>
-  <body>
-  <div id="body-inner">
-    <div class="panel" id="top-navigation">
-      <div class="padding">
-        <ul class="horizontal-navigation">
-          <li><div class="padding"><a href="/index.html">Home</a></div></li>
-          <li><div class="padding"><a href="/hobbies.html">Hobbies</a></div></li>
-          <li><div class="padding"><a href="/cool_software.html">Cool Software</a></div></li>
-        </ul>
-        <hr>
-      </div>
+  <body><div id="body-inner">
+    <div id="top-navigation">
+      <ul class="horizontal-navigation">
+        <li><div class="padding"><a href="/index.html">Home</a></div></li>
+        <li><div class="padding"><a href="/hobbies.html">Hobbies</a></div></li>
+        <li><div class="padding"><a href="/cool_software.html">Cool Software</a></div></li>
+      </ul>
+      <span></span>
     </div>
 
-    <div class="panel" id="title-block">
-      <div class="padding">
-        $title$
-      </div>
-
-    </div>
+    <h1>$title$</h1>
 
 <!--[if IE 6]>
     <div class="panel" id="ie6-warning"><div class="padding">
@@ -43,18 +35,13 @@
     </div></div>
 <![endif]-->
 
-    <div class="panel"><div class="padding">
+    <div class="panel" id="content"><div>
 $body$
     </div></div>
 
-<!--
-    <div class="panel">
-      <div class="padding">
-        <p>Copyright 2011 Alexander Hirzel
-        &lt;email@dot.com&gt;.</p>
-      </div>
-    </div>
--->
-  </div>
-  </body>
+    <div class="panel padded"><div>
+      <p>Copyright 2011 Alexander Hirzel
+      &lt;email@dot.com&gt;.</p>
+    </div></div>
+  </div></body>
 </html>
