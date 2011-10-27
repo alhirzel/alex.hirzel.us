@@ -8,16 +8,11 @@
 	background-color: white;
 }
 
-.clearer { clear: both; }
-.clearer * { display: none; }
-
 /* DEBUGGING
- * *
 .panel { background-color: green; }
 .left .panel { background-color: red; }
 .right .panel { background-color: blue; }
 .sidebar { background-color: purple; }
-/*
 */
 
 #title-block {

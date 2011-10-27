@@ -12,9 +12,10 @@
 * { overflow: hidden; position: relative; }
 </style>
 <![endif]-->
-    <link href="/layout.css" rel="stylesheet" type="text/css" />
-    <link href="/navigation-list.css" rel="stylesheet" type="text/css" />
-    <link href="/appearance.css" rel="stylesheet" type="text/css" />
+    <link href="/layout.css"          rel="stylesheet" title="Alex's default" type="text/css" />
+    <link href="/navigation-list.css" rel="stylesheet" title="Alex's default" type="text/css" />
+    <link href="/appearance.css"      rel="stylesheet" title="Alex's default" type="text/css" />
+    <!-- include Mootools if necessary-->
   </head>
   <body>
   <div id="body-inner">
