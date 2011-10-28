@@ -1,4 +1,8 @@
-<h1>Test page</h1>
+---
+title: CSS Test Page
+author: Alex Hirzel
+---
+
 <p>This is the page Alex keeps around to test his rapidly-growing library of CSS.</p>
 
 
