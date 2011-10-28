@@ -14,8 +14,8 @@ ul.horizontal-navigation li {
 ul.horizontal-navigation li {
 	list-style-type: none;
 }
-ul.horizontal-navigation li .padding {
-	padding: 0.5ex 0.5em;
+ul.horizontal-navigation li > a {
+	display: block;
 }
 
 /* styles for first level (cancel for deeper) */
