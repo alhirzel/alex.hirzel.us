@@ -1,34 +1,42 @@
 
-/* colors */
-body {
-	background-color: #ddd;
-}
-#body-inner {
-	background-color: white;
-/*
-	border: solid #248;
-	border-width: 0 15px 0 15px;
-	-moz-border-radius: 15px 15px 0 0;
-*/
-}
+/* Colors
+ * ====== */
 
-p a {
-	color: #248;
-}
+/* side margin */
+body { background-color: #ddd; }
+
+/* content */
+#body-inner { background-color: white; }
+
+/* header */
+#top-header h1 { background-color: #248; color: white; }
+
+/* navigation bar */
+#top-navigation { background-color: #248; }
+#top-navigation a       { background-color: #248;  border-color: #248; color: white; }
+#top-navigation a:hover { background-color: white; border-color: black; color: black; }
+
+/* links */
+p a { color: #248; }
+
+
+
+
+
+
+
+
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 
-#top-navigation {
-	background-color: #248;
-}
 
+/* rounded corner effect */
+#top-navigation a:hover { -moz-border-radius: 0.4em 0.4em 0 0; }
 #top-navigation a {
 	border: 1px solid black;
 	border-bottom: none;
 	border-color: #248;
 	margin-left: 8px;
-	color: black;
-	background-color: #482;
 	font-weight: bold;
 	font-family: "Verdana", sans-serif;
 	padding: 0.25em 0.75em;
@@ -36,26 +44,63 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
 	text-decoration: none;
 }
 
-#top-navigation a:hover {
-	background-color: white;
-	-moz-border-radius: 0.4em 0.4em 0 0;
-}
-#top-navigation a       { background-color: #248;  border-color: #248; color: white; }
-#top-navigation a:hover { background-color: white; border-color: #248; color: black; }
-
 #top-header h1 {
-	background-color: #248;
-	margin: 0;
-}
-
-h1 {
-	color: white;
 	font-size: 200%;
 	font-weight: bold;
 	text-align: right;
 	font-family: "Verdana", sans-serif;
 
+	margin: 0;
+
 	padding: 0.25em 0.5em;
 	padding-bottom: 0.5em;
 }
 
+
+
+
+
+
+/* Set color scheme */
+/*
+body {
+	background-color: #c0bba8;
+}
+#header {
+	background-color: #676a73;
+}
+#header > h1 {
+	background-color: #a75d04;
+	color: #e9f1f3;
+	padding: 1ex 0.5em;
+}
+#content {
+	background-color: #95acbe;
+}
+*/
+
+
+/* Set header fonts to sans-serif, other fonts to serif */
+body {
+	font-family: serif;
+}
+
+h1, h2, h3, h4, h5, h6, th, dt {
+	font-family: sans-serif;
+}
+
+
+/* COLORS:
+676a73
+95acbe
+e9f1f3
+c0bba8
+a75d04
+http://dailyduluth.wordpress.com/2009/10/
+
+#2e4358
+#a3bfd9
+#f2dc99
+#f2c48d
+#d9a689
+*/
