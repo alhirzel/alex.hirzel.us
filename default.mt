@@ -18,16 +18,16 @@
     <!-- include Mootools if necessary-->
   </head>
   <body><div id="body-inner">
+    <div id="top-header"><h1>$title$</h1></div>
+
     <div id="top-navigation">
       <ul class="horizontal-navigation">
-        <li><div class="padding"><a href="/index.html">Home</a></div></li>
-        <li><div class="padding"><a href="/hobbies.html">Hobbies</a></div></li>
-        <li><div class="padding"><a href="/cool_software.html">Cool Software</a></div></li>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/hobbies.html">Hobbies</a></li>
+        <li><a href="/cool_software.html">Cool Software</a></li>
       </ul>
       <span></span>
     </div>
-
-    <h1>$title$</h1>
 
 <!--[if IE 6]>
     <div class="panel" id="ie6-warning"><div class="padding">

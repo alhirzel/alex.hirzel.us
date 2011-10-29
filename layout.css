@@ -51,7 +51,7 @@
 
 /* cleanse the margins so we don't have to worry about a stray */
 html, body, div { margin: 0; padding: 0; }
-html, body { height: 100%; }
+html, body, body > #body-inner { height: 100%; }
 
 /* center the whole page */
 #body-inner { margin: 0 auto; }
