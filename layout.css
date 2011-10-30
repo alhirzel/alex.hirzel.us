@@ -72,23 +72,23 @@ html, body, body > #body-inner { height: 100%; }
  * -----------------------------------
  */
 
-#body-inner { width: 50em; }
+#body-inner { max-width: 50em; }
 
 /* sizes */
 .multicolumn.two   > .left   > .panel,
-.multicolumn.two   > .right  > .panel { width: 25em; }
+.multicolumn.two   > .right  > .panel { max-width: 25em; }
 
 .multicolumn.three > .left   > .panel,
 .multicolumn.three > .center > .panel,
-.multicolumn.three > .right  > .panel { width: 16.666666666666em; }
+.multicolumn.three > .right  > .panel { max-width: 16.666666666666em; }
 
 /* behavior */
 .multicolumn       > .left   { float: left; }
 .multicolumn       > .center { margin: 0 33.333333333333%; }
 .multicolumn       > .right  { float: right; }
 
-.sidebar           > .sidebar > .panel { width: 14em; }
-.sidebar           > .big     > .panel { width: 36em; }
+.sidebar           > .sidebar > .panel { max-width: 14em; }
+.sidebar           > .big     > .panel { max-width: 36em; }
 .sidebar           > .left   { float: left; }
 .sidebar           > .right  { float: right; }
 
