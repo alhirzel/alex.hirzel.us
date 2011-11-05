@@ -55,7 +55,7 @@ html, body { height: 100%; }
 body > #body-inner { min-height: 100%; }
 
 /* center the whole page */
-#body-inner { margin: 0 auto; }
+#body-inner, #page-footer { margin: 0 auto; }
 
 .panel.padded > div {
 	padding: 0.15in;
@@ -73,7 +73,7 @@ body > #body-inner { min-height: 100%; }
  * -----------------------------------
  */
 
-#body-inner { max-width: 50em; }
+#body-inner, #page-footer { width: 50em; }
 
 /* sizes */
 .multicolumn.two   > .left   > .panel,
@@ -93,3 +93,19 @@ body > #body-inner { min-height: 100%; }
 .sidebar           > .left   { float: left; }
 .sidebar           > .right  { float: right; }
 
+
+
+/* Footer (just outside #body-inner
+ * --------------------------------
+ */
+
+/* this must have the same height so the footer does not overlap with the
+ * bottom of #content. */
+#body-inner > #page-footer-placeholder {
+	height: 3em;
+}
+
+#page-footer.panel.padded {
+	height: 3em;
+	margin-top: -3em;
+}

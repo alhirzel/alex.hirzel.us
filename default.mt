@@ -39,9 +39,10 @@
 $body$
     </div></div>
 
-    <div class="panel padded"><div>
-      <p>Copyright 2011 Alexander Hirzel
-      &lt;email@dot.com&gt;.</p>
-    </div></div>
-  </div></body>
+    <div id="page-footer-placeholder"></div>
+  </div>
+  <div class="panel padded" id="page-footer"><div>
+    <small>Copyright 2011 Alexander Hirzel &lt;email@dot.com&gt;.</small>
+  </div></div>
+  </body>
 </html>
