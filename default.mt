@@ -35,7 +35,7 @@
     </div></div>
 <![endif]-->
 
-    <div class="panel" id="content"><div>
+    <div class="panel padded" id="content"><div>
 $body$
     </div></div>
 

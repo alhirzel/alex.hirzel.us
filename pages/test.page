@@ -3,7 +3,10 @@ title: CSS Test Page
 author: Alex Hirzel
 ---
 
-<p>This is the page Alex keeps around to test his rapidly-growing library of CSS.</p>
+<div style="width: 50em">
+
+<p>This is the page Alex keeps around to test his rapidly-growing library of
+CSS. Note that it has a fixed 50em width so that layouts don't break.</p>
 
 
 <h3>Horizontal Navigation</h3>
@@ -223,5 +226,7 @@ author: Alex Hirzel
     </div></div>
   </div>
   <span></span>
+</div>
+
 </div>
 
