@@ -26,9 +26,13 @@ config = defaultHakyllConfiguration {
 
 -- TODO: add something here to populate siteKeys
 bestCompilerEver =
-  pageCompilerWith defaultParserState defaultWriterOptions >>>
+  pageCompilerWith p w >>>
   applyTemplateCompiler "default.mt" >>>
   relativizeUrlsCompiler
+  where
+    w = defaultWriterOptions {
+          writerHtml5 = True }
+    p = defaultParserState
 
 
 main = hakyllWith config $ do
