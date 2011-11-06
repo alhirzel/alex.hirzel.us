@@ -3,18 +3,18 @@
   <head>
     <title>$title$</title>
     <meta charset="utf-8">
-    <meta name="author" href="$author$" />
-    <meta name="generator" href="Awesome custom software by Alex" />
-    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+    <meta name="author" content="$author$">
+    <meta name="generator" content="Awesome custom software by Alex">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!--[if IE 6]>
 <style type="text/css">
 /* Give everything a hasLayout in Internet Explorer 6 */
 * { overflow: hidden; position: relative; }
 </style>
 <![endif]-->
-    <link href="/layout.css"          rel="stylesheet" title="Alex's default" type="text/css" />
-    <link href="/navigation-list.css" rel="stylesheet" title="Alex's default" type="text/css" />
-    <link href="/appearance.css"      rel="stylesheet" title="Alex's default" type="text/css" />
+    <link href="/layout.css"          rel="stylesheet" title="Alex's default" type="text/css">
+    <link href="/navigation-list.css" rel="stylesheet" title="Alex's default" type="text/css">
+    <link href="/appearance.css"      rel="stylesheet" title="Alex's default" type="text/css">
     <!-- include Mootools if necessary-->
   </head>
   <body><div id="body-inner">
