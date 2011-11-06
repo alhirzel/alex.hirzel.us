@@ -3,6 +3,9 @@ title: Cool Software
 author: Alex Hirzel
 ---
 
+Useful/unique software
+----------------------
+
 This is a list of cool software tools I frequently use presented in the order
 in which I thought of them. My rationale for creating this list is it will help
 other people to cut right to the meat of what's out there--right to the very
@@ -34,3 +37,51 @@ website).
 
 PDF-Shuffler
   ~ http://sourceforge.net/projects/pdfshuffler/
+
+
+
+New installation of Windows
+---------------------------
+
+Here is a list of programs that I normally install with Windows. This is mostly
+for my benefit when I am reinstalling for other people. Links are to the
+canonical latest version when possible and will automatically start the
+download in some cases.
+
+  * [CCleaner], [Defraggler]
+  * [Java Runtime]
+  * [Acrobat Reader], [Flash]
+  * [K-Lite] (and [K-Lite64] if applicable) which add support for a lot of
+    audio/video codecs as well as thumbnailing for "weird" file types
+  * [Picasa]
+
+I also make some other modifications, such as
+
+  * Installing the Task Manager replacement <code>[procexp.exe]</code> into
+    <code>C:\\WINDOWS</code>, activating it 
+  * Drop a copy of <code>[putty.exe]</code> in thw WINDOWS directory
+
+
+
+Antivirus software
+------------------
+[ComboFix.exe] [Malwarebytes] [Norton Removal Tool] [PrevxCSI] [Vipre]
+
+
+
+[Acrobat Reader]: <http://get.adobe.com/reader/otherversions/>
+[CCleaner]: <http://www.piriform.com/ccleaner/download/standard>
+[Defraggler]: <http://www.piriform.com/defraggler/download/standard>
+[Flash]: <http://get.adobe.com/flashplayer/completion/?installer=Flash_Player_11_for_Internet_Explorer_%2832_bit%29>
+[Java Runtime]: <http://javadl.sun.com/webapps/download/AutoDL?BundleId=57240>
+[K-Lite]: <http://www.filehippo.com/download_klite_mega_codec/>
+[K-Lite64]: <http://majorgeeks.com/K-Lite_Codec_Pack_64-bit_d6417.html>
+[Picasa]: <http://picasa.google.com/thanks.html>
+[procexp.exe]: <http://live.sysinternals.com/procexp.exe>
+[putty.exe]: <http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe>
+
+[ComboFix.exe]: <http://download.bleepingcomputer.com/sUBs/ComboFix.exe>
+[Malwarebytes]: <http://www.malwarebytes.org/mbam-download-exe.php>
+[Norton Removal Tool]: <ftp://ftp.symantec.com/public/english_us_canada/removal_tools/Norton_Removal_Tool.exe>
+[PrevxCSI]: <http://info.prevx.com/download.asp?grab=prevxcsi>
+[Vipre]: <http://go.sunbeltsoftware.com/?linkid=411>
