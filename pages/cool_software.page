@@ -60,6 +60,7 @@ I also make some other modifications, such as
   * Installing the Task Manager replacement <code>[procexp.exe]</code> into
     <code>C:\\WINDOWS</code>, activating it 
   * Drop a copy of <code>[putty.exe]</code> in thw WINDOWS directory
+  * Install <code>[pagedfrg.exe]</code>
 
 
 
@@ -78,6 +79,7 @@ Antivirus software
 [K-Lite64]: <http://majorgeeks.com/K-Lite_Codec_Pack_64-bit_d6417.html>
 [Picasa]: <http://picasa.google.com/thanks.html>
 [procexp.exe]: <http://live.sysinternals.com/procexp.exe>
+[pagedfrg.exe]: <http://live.sysinternals.com/pagedfrg.exe>
 [putty.exe]: <http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe>
 
 [ComboFix.exe]: <http://download.bleepingcomputer.com/sUBs/ComboFix.exe>
