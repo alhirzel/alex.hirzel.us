@@ -39,6 +39,10 @@ Web2PDFConvert.com
 PDF-Shuffler
   ~ http://sourceforge.net/projects/pdfshuffler/
 
+[Firefox]/[Firebug]
+  ~ Makes debugging/visualizing web pages and JavaScript very easy. I used it
+    to get a lot of the direct-download links that are on this page.
+
 
 
 New installation of Windows
@@ -55,6 +59,7 @@ download in some cases.
   * [K-Lite] (and [K-Lite64] if applicable) which add support for a lot of
     audio/video codecs as well as thumbnailing for "weird" file types
   * [Picasa]
+  * Another browser, such as [Firefox] or [Google Chrome]
 
 I also make some other modifications, such as
 
@@ -62,6 +67,7 @@ I also make some other modifications, such as
     <code>C:\\WINDOWS</code>, activating it 
   * Drop a copy of <code>[putty.exe]</code> in thw WINDOWS directory
   * Install <code>[pagedfrg.exe]</code>
+  * Change the screensaver to [Electric Sheep]
 
 
 
@@ -71,20 +77,26 @@ Antivirus software
 
 
 
+
+
 [Acrobat Reader]: <http://get.adobe.com/reader/otherversions/>
 [CCleaner]: <http://www.piriform.com/ccleaner/download/standard>
+[ComboFix.exe]: <http://download.bleepingcomputer.com/sUBs/ComboFix.exe>
 [Defraggler]: <http://www.piriform.com/defraggler/download/standard>
+[Electric Sheep]: <http://electricsheep.org/download>
+[Firebug]: <https://addons.mozilla.org/en-US/firefox/addon/firebug/>
+[Firefox]: <http://www.mozilla.org/en-US/firefox/all.html>
 [Flash]: <http://get.adobe.com/flashplayer/completion/?installer=Flash_Player_11_for_Internet_Explorer_%2832_bit%29>
+[Google Chrome]: <http://google.com/update2/installers/ChromeSetup.exe>
 [Java Runtime]: <http://javadl.sun.com/webapps/download/AutoDL?BundleId=57240>
 [K-Lite]: <http://www.filehippo.com/download_klite_mega_codec/>
 [K-Lite64]: <http://majorgeeks.com/K-Lite_Codec_Pack_64-bit_d6417.html>
+[Malwarebytes]: <http://www.malwarebytes.org/mbam-download-exe.php>
+[Norton Removal Tool]: <ftp://ftp.symantec.com/public/english_us_canada/removal_tools/Norton_Removal_Tool.exe>
 [Picasa]: <http://picasa.google.com/thanks.html>
+[PrevxCSI]: <http://info.prevx.com/download.asp?grab=prevxcsi>
 [procexp.exe]: <http://live.sysinternals.com/procexp.exe>
 [pagedfrg.exe]: <http://live.sysinternals.com/pagedfrg.exe>
 [putty.exe]: <http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe>
-
-[ComboFix.exe]: <http://download.bleepingcomputer.com/sUBs/ComboFix.exe>
-[Malwarebytes]: <http://www.malwarebytes.org/mbam-download-exe.php>
-[Norton Removal Tool]: <ftp://ftp.symantec.com/public/english_us_canada/removal_tools/Norton_Removal_Tool.exe>
-[PrevxCSI]: <http://info.prevx.com/download.asp?grab=prevxcsi>
 [Vipre]: <http://go.sunbeltsoftware.com/?linkid=411>
+
