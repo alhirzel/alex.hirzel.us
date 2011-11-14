@@ -1,0 +1,78 @@
+---
+title: Atmel AVR notes
+author: Alex Hirzel
+---
+
+Recently I was looking to gain some proficiency using microcontrollers. I
+bought an [AVR Dragon] and started messing with hardware I have had laying
+around for some time. Specifically, I have had a few [Arduino Duemilanove]
+boards and a few other [AVR]s for approximately as long as I can remember. It
+has been a semester or two since the [class I took on microcontrollers][EE3170]
+and was looking for the best way to dive back in.
+
+![](light_follower.jpg)
+
+**I was finding myself limited** (as I am guessing other people may) by the fact
+that I didn't have a dev board like I did when I took the class. Also, having
+already sunken in the $50 for the Dragon, I wasn't about to go out and buy
+another upper-level bit of kit. I decided to see what I could do without buying
+additional hardware. **I came up with the following list (in order!) of things
+to try when there is no dev board to hack around with:**
+
+  1. Output to an LED (digital and analog/PWM);
+  2. Have an LED's brightness level follow ambient light with a [photoresistor]
+     (shown in the picture above);
+  3. Establish serial connection with a PC so <code>printf</code> and friends
+     work;
+  4. Characterize a photoresistor;
+
+If you read this linearly, it will turn out that I have a lot more spare parts
+than I am alluding to at this point. For that reason, it may be difficult to
+follow my exact path.
+
+
+Output to an LED
+----------------
+(To be written.)
+
+
+Light "copier"
+--------------
+Set up an ADC to run in constant conversion mode and update the PWM duty cycle
+in the ISR. Find a resistance that closely matches the "pretty dark" resistance
+of your photoresistor. On my particular unit, I was seeing a swing from 400
+ohms to 68 kohms between holding a lighter up to it and engulfing it completely
+in finger.  I picked a 27 kohm resistor and oriented a voltage divider so that
+the ADC would read high in light (i.e. photoresistor on the positive leg). I
+ended up subtracting 128 from the 8-bit conversion result and doing some bounds
+checking to get it on an interval from 0-127. This--multiplied by two to map
+onto the range 0-255--is the value I use for the PWM duty cycle.
+
+
+Serial communication with a PC
+------------------------------
+(To be written.)
+
+(minicom)
+
+
+Characterizing a photoresistor
+------------------------------
+One of the previous exercises made me wonder: just how non-linear is the
+photoresistor I was using? I resolved to find out.
+
+I dug a digital potentiometer out of my bag of tricks. Some of you may call
+shenanegans here because the average Joe isn't going to just randomly have one.
+As it turns out, at some time in the distant past I sampled one from Microchip.
+You can do the same.
+
+(To be written.)
+
+
+
+[AVR Dragon]: <http://www.atmel.com/dyn/products/tools_card.asp?tool_id=3891>
+[AVR]: <http://en.wikipedia.org/wiki/Atmel_AVR>
+[Arduino Duemilanove]: <http://arduino.cc/en/Main/arduinoBoardDuemilanove>
+[EE3170]: <http://www.google.com/search?q=MTU+EE3170>
+[Photoresistor]: <http://en.wikipedia.org/wiki/Photoresistor>
+

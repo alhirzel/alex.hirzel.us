@@ -31,6 +31,7 @@
         <li><a href="/index.html">Home</a></li>
         <li><a href="/hobbies.html">Hobbies</a></li>
         <li><a href="/cool_software.html">Cool Software</a></li>
+        <li><a href="/atmel_avr.html">AVR Notes</a></li>
       </ul>
       <span></span>
     </div>
