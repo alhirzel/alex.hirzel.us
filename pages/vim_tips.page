@@ -1,0 +1,48 @@
+---
+title: Vim Tips
+author: Alex Hirzel
+---
+
+This is a small collection of tips for the [Vim][vim] text editor, one of my
+tools of choice. Hats off to [the Vim tips wiki][vimtips], but I didn't find
+these there. When I found about most of these, I was in a situation where I
+figured "there *must* be a key for that"; sure enough, there was. Other items
+in this list were added because they seemed useful and I didn't want to forget
+about them.
+
+Scroll the viewport
+  ~ In Normal mode, <kbd>CTRL+U</kbd> and <kbd>CTRL+D</kbd> scroll half a
+    viewport up and down, respectively. (I don't know how to do this in Insert
+    mode with the default keybindings.)
+
+Paste in Insert mode
+  ~ <kbd>CTRL+R "r</kbd>, where <kbd>r</kbd> is the register to use
+    (<kbd>+</kbd> for the system clipboard)
+
+Copy the word under the cursor when the cursor is in the middle of the word
+  ~ <kbd>yiw</kbd> in Normal mode (also things like <kbd>yi"</kbd> work to grab
+    quoted text from inside, etc.)
+
+Move the cursor to the top, middle or bottom of the viewport
+  ~ Normal mode: <kbd>H</kbd>, <kbd>M</kbd> and <kbd>L</kbd> (:help Q_vm)
+
+
+
+<!--
+asdf
+  ~ :marks (:help Q_ma)
+
+asdf
+  ~ :help Q_sc
+
+asdf
+  ~ :r!
+
+asdf
+  ~ :ab mtu Michigan Technological University
+
+Put these on your website.
+-->
+
+[vim]: <http://www.vim.org/>
+[vimtips]: <http://vim.wikia.com/wiki/Vim_Tips_Wiki>

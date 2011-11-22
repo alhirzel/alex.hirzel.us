@@ -16,7 +16,10 @@ LaTeX
     and generate good-looking PDFs for a wide variety of target audiences. The
     built-in templates for 
 
-Vim
+[Vim]
+  ~ A great text editor and my editor of choice. I am a somewhat egotistical
+    user who takes pride in knowing more tricks than my friends. I am starting
+    to maintain a [page of Vim tips](vim_tips.html) for the interested.
 
 Haskell
 
@@ -42,6 +45,9 @@ PDF-Shuffler
 [Firefox]/[Firebug]
   ~ Makes debugging/visualizing web pages and JavaScript very easy. I used it
     to get a lot of the direct-download links that are on this page.
+
+
+[Vim]: <http://www.vim.org/>
 
 
 
