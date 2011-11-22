@@ -7,14 +7,19 @@ Useful/unique software
 ----------------------
 
 This is a list of cool software tools I frequently use presented in the order
-in which I thought of them. My rationale for creating this list is it will help
-other people to cut right to the meat of what's out there--right to the very
-best programs.
+in which I thought of them (read: no intended order). My rationale for creating
+this list is it will help other people to cut right to the meat of what's out
+there--right to the very best programs.
 
 LaTeX
-  ~ The best tool for creating documents. It enables you to write in plain text
-    and generate good-looking PDFs for a wide variety of target audiences. The
-    built-in templates for 
+  ~ The best tool for creating most documents, but it has a learning curve.
+    LaTeX (la-TEK) enables you to write in plain text and generate
+    [good-looking PDFs][resume] for a wide variety of target audiences. The
+    bundled templates are appropriate for many types of document/publications
+    including presentations with [Beamer], [IEEE publication][ieeetran.sty],
+    and the standard report and thesis work which has lifted it to dominance
+    in the realm of academic publishing. Add-ons are numerous and include the
+    excellent [TikZ] package, [Sweave], and many others.
 
 [Vim]
   ~ A great text editor and my editor of choice. I am a somewhat egotistical
@@ -22,16 +27,22 @@ LaTeX
     to maintain a [page of Vim tips](vim_tips.html) for the interested.
 
 Haskell
+  ~ ()
 
 zsh
+  ~ ()
 
 pfsense
+  ~ ()
 
 Git
+  ~ ()
 
 tmux
+  ~ ()
 
 FreeBSD
+  ~ ()
 
 Web2PDFConvert.com
   ~ A web-based HTML-to-PDF converter. It is distinct from the many other
@@ -47,6 +58,11 @@ PDF-Shuffler
     to get a lot of the direct-download links that are on this page.
 
 
+[Beamer]: <https://bitbucket.org/rivanvx/beamer/wiki/Home>
+[ieeetran.sty]: <http://www.michaelshell.org/tex/ieeetran/>
+[resume]: <javascript:alert('haven\'t uploaded my resume yet');>
+[Sweave]: <http://www.stat.uni-muenchen.de/~leisch/Sweave/>
+[TikZ]: <http://en.wikipedia.org/wiki/PGF/TikZ>
 [Vim]: <http://www.vim.org/>
 
 
