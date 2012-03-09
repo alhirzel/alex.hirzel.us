@@ -19,6 +19,12 @@ body { background-color: #ddd; }
 /* links */
 p a { color: #248; }
 
+/* footer background */
+#page-footer.panel.padded {
+	-moz-border-radius: 1em 1em 0 0;
+	background-color: #248;
+	color: white;
+}
 
 
 
@@ -44,7 +50,11 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
 	text-decoration: none;
 }
 
+/* h1 is used for the header of the page only */
+h1 { display: none; }
 #top-header h1 {
+	display: block;
+
 	font-size: 200%;
 	font-weight: bold;
 	text-align: right;
@@ -80,9 +90,9 @@ body {
 */
 
 
-/* Set header fonts to sans-serif, other fonts to serif */
+/* Set header fonts to sans-serif, other fonts to serif for printing and sans-serif for screen */
 body {
-	font-family: serif;
+	font-family: "Arial", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, th, dt {
