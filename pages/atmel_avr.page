@@ -54,6 +54,14 @@ Serial communication with a PC
 (To be written.)
 
 (minicom)
+http://forum.pololu.com/viewtopic.php?f=3&t=4291
+
+I spent roughly an hour trying to figure out why <code>printf</code> and
+friends weren't working, but I could still pump out characters over the serial
+port manually. It turns out my <code>.hex</code> file was not including the
+<code>.data</code> section, per [this thread on AVRFreaks][thread]
+
+[thread]: <http://www.avrfreaks.net/index.php?name=PNphpBB2&file=printview&t=84474&start=0>
 
 
 Characterizing a photoresistor
