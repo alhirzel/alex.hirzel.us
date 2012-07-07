@@ -1,4 +1,4 @@
-hakyll=./hakyll
+HAKYLL=./hakyll
 
 DEFAULT: build
 
@@ -14,17 +14,17 @@ TEMPLATES: $(wildcard *.mt)
 deploy: build
 	rsync -rv htdocs/ nfsn:/home/public
 
-build: hakyll PAGES TEMPLATES
-	${hakyll} rebuild
+build: ${HAKYLL} PAGES TEMPLATES
+	${HAKYLL} rebuild
 
 clean:
-	-${hakyll} clean
-	rm -f ${hakyll}
+	-${HAKYLL} clean
+	rm -f ${HAKYLL}
 
 
 
 # build commands for the hakyll script
-hakyll: hakyll.hs
+${HAKYLL}: hakyll.hs
 	ghc --make hakyll.hs
 	rm -f hakyll.o hakyll.hi
 
