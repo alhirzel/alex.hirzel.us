@@ -6,26 +6,15 @@ author: Alex Hirzel
 Useful/unique software
 ----------------------
 
-This is a list of cool software tools I frequently use presented in the order
-in which I thought of them (read: no intended order). My rationale for creating
-this list is it will help other people to cut right to the meat of what's out
-there--right to the very best programs.
+This is a list of cool software tools I frequently use presented in the order in which I thought of them (read: there is no intended order). My rationale for creating this list is it will help other people to cut right to the meat of what's out there--right to the very best programs.
 
 LaTeX
-  ~ The best tool for creating most documents, but it has a learning curve.
-    LaTeX (la-TEK) enables you to write in plain text and generate
-    [good-looking PDFs][resume] for a wide variety of target audiences. The
-    bundled templates are appropriate for many types of document/publications
-    including presentations with [Beamer], [IEEE publication][ieeetran.sty],
-    and the standard report and thesis work which has lifted it to dominance
-    in the realm of academic publishing. Add-ons are numerous and include the
-    excellent [TikZ] package, [Sweave], and many others.
+  ~ The best tool for creating most documents, but it has a learning curve. LaTeX (pronounced la-TEK) enables you to write in plain text and generate [good-looking PDFs][resume] for a wide variety of target audiences. The bundled templates are appropriate for many types of document/publications including presentations with [Beamer], [IEEE publication][ieeetran.sty], and the standard report and thesis work which has lifted it to dominance in the realm of academic publishing. Add-ons are numerous and include the excellent [TikZ] package, [Sweave], and many others.
 
 [Vim]
-  ~ A great text editor and my editor of choice. I am a somewhat egotistical
-    user who takes pride in knowing more tricks than my friends. I am starting
-    to maintain a [page of Vim tips](vim_tips.html) for the interested.
+  ~ A great text editor and my editor of choice. I am a somewhat egotistical user who takes pride in knowing more tricks than my friends. I am starting to maintain a [page of Vim tips](vim_tips.html) for the interested.
 
+<!--
 Haskell
   ~ ()
 
@@ -43,27 +32,34 @@ tmux
 
 FreeBSD
   ~ ()
+-->
 
-Web2PDFConvert.com
-  ~ A web-based HTML-to-PDF converter. It is distinct from the many other
-    web-based tools because it treats HTML anchors correctly (i.e. generates a
-    link within the PDF which goes to a different page rather than to the
-    website).
+[Web2PDFConvert.com]
+  ~ A web-based HTML-to-PDF converter. It is distinct from the many other web-based tools because it treats HTML anchors correctly (i.e. generates a link within the PDF which goes to a different page rather than to the website). There is usually a better way to save web pages, but in a pinch I turn to this one.
 
-PDF-Shuffler
-  ~ http://sourceforge.net/projects/pdfshuffler/
+[PDF-Shuffler]
+  ~ I have contributed patches for this one. It's a great tool for those of us with an autofeeding scanner because you can easily split PDFs.
 
 [Firefox]/[Firebug]
-  ~ Makes debugging/visualizing web pages and JavaScript very easy. I used it
-    to get a lot of the direct-download links that are on this page.
+  ~ Makes debugging/visualizing web pages and JavaScript very easy. I used it to get a lot of the direct-download links that are on this page.
+
+[LXAppearance]
+  ~ Configure GTK themes--especially useful for those of us who don't use KDE, GNOME or XFCE.
+
+[AltDrag]
+  ~ Window resizing in Microsoft Windows is annoying once you're used to it on &lt;insert name of other GUI here&gt;. This helps.
 
 
 [Beamer]: <https://bitbucket.org/rivanvx/beamer/wiki/Home>
 [ieeetran.sty]: <http://www.michaelshell.org/tex/ieeetran/>
-[resume]: <javascript:alert('haven\'t uploaded my resume yet');>
+[resume]: <javascript:alert('have not uploaded my resume yet');return false;>
 [Sweave]: <http://www.stat.uni-muenchen.de/~leisch/Sweave/>
 [TikZ]: <http://en.wikipedia.org/wiki/PGF/TikZ>
 [Vim]: <http://www.vim.org/>
+[PDF-Shuffler]: <http://sourceforge.net/projects/pdfshuffler/>
+[LXAppearance]: <http://wiki.lxde.org/en/LXAppearance>
+[AltDrag]: <http://code.google.com/p/altdrag/>
+[Web2PDFConvert.com]: <http://web2pdfconvert.com/>
 
 
 
@@ -71,7 +67,7 @@ New installation of Windows
 ---------------------------
 
 Here is a list of programs that I normally install with Windows. This is mostly
-for my benefit when I am reinstalling for other people. Links are to the
+for my benefit when I am reinstalling for other people. Links below are to the
 canonical latest version when possible and will automatically start the
 download in some cases.
 
@@ -86,7 +82,7 @@ download in some cases.
 I also make some other modifications, such as
 
   * Installing the Task Manager replacement <code>[procexp.exe]</code> into
-    <code>C:\\WINDOWS</code>, activating it 
+    <code>C:\\WINDOWS</code> and launching it to activating
   * Drop a copy of <code>[putty.exe]</code> in thw WINDOWS directory
   * Install <code>[pagedfrg.exe]</code>
   * Change the screensaver to [Electric Sheep]
@@ -121,4 +117,3 @@ Antivirus software
 [pagedfrg.exe]: <http://live.sysinternals.com/pagedfrg.exe>
 [putty.exe]: <http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe>
 [Vipre]: <http://go.sunbeltsoftware.com/?linkid=411>
-

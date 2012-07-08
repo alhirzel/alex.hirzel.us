@@ -3,10 +3,7 @@ title: CSS Test Page
 author: Alex Hirzel
 ---
 
-<div style="width: 50em">
-
-<p>This is the page Alex keeps around to test his rapidly-growing library of
-CSS. Note that it has a fixed 50em width so that layouts don't break.</p>
+This is the page Alex keeps around to test his rapidly-growing library of CSS. Note that it has a fixed 50em width so that layouts don't break.
 
 
 <h3>Horizontal Navigation</h3>
@@ -40,15 +37,15 @@ CSS. Note that it has a fixed 50em width so that layouts don't break.</p>
 
 <div class="multicolumn two">
   <div class="left">
-    <div class="panel" style="background-color: red"><div>
+    <div class="panel padded" style="background-color: red"><div>
       one/one
     </div></div>
   </div>
   <div class="right">
-    <div class="panel" style="background-color: blue"><div>
+    <div class="panel padded" style="background-color: blue"><div>
       one/two
     </div></div>
-    <div class="panel" style="background-color: blue"><div>
+    <div class="panel padded" style="background-color: blue"><div>
       two/two
     </div></div>
   </div>
@@ -59,15 +56,15 @@ CSS. Note that it has a fixed 50em width so that layouts don't break.</p>
 
 <div class="multicolumn two">
   <div class="left">
-    <div class="panel" style="background-color: red"><div>
+    <div class="panel padded" style="background-color: red"><div>
       one/two
     </div></div>
-    <div class="panel" style="background-color: red"><div>
+    <div class="panel padded" style="background-color: red"><div>
       two/two
     </div></div>
   </div>
   <div class="right">
-    <div class="panel" style="background-color: blue"><div>
+    <div class="panel padded" style="background-color: blue"><div>
       one/one
     </div></div>
   </div>
@@ -80,20 +77,20 @@ CSS. Note that it has a fixed 50em width so that layouts don't break.</p>
 
 <div class="multicolumn three">
   <div class="left">
-    <div class="panel" style="background-color: red"><div>
+    <div class="panel padded" style="background-color: red"><div>
       one/one
     </div></div>
   </div>
   <div class="right">
-    <div class="panel" style="background-color: blue"><div>
+    <div class="panel padded" style="background-color: blue"><div>
       one/two
     </div></div>
-    <div class="panel" style="background-color: blue"><div>
+    <div class="panel padded" style="background-color: blue"><div>
       two/two
     </div></div>
   </div>
   <div class="center">
-    <div class="panel" style="background-color: green"><div>
+    <div class="panel padded" style="background-color: green"><div>
       one/one
     </div></div>
   </div>
@@ -104,20 +101,20 @@ CSS. Note that it has a fixed 50em width so that layouts don't break.</p>
 
 <div class="multicolumn three">
   <div class="left">
-    <div class="panel" style="background-color: red"><div>
+    <div class="panel padded" style="background-color: red"><div>
       one/one
     </div></div>
   </div>
   <div class="right">
-    <div class="panel" style="background-color: blue"><div>
+    <div class="panel padded" style="background-color: blue"><div>
       one/one
     </div></div>
   </div>
   <div class="center">
-    <div class="panel" style="background-color: green"><div>
+    <div class="panel padded" style="background-color: green"><div>
       one/two
     </div></div>
-    <div class="panel" style="background-color: green"><div>
+    <div class="panel padded" style="background-color: green"><div>
       two/two
     </div></div>
   </div>
@@ -128,20 +125,20 @@ CSS. Note that it has a fixed 50em width so that layouts don't break.</p>
 
 <div class="multicolumn three">
   <div class="left">
-    <div class="panel" style="background-color: red"><div>
+    <div class="panel padded" style="background-color: red"><div>
       one/two
     </div></div>
-    <div class="panel" style="background-color: red"><div>
+    <div class="panel padded" style="background-color: red"><div>
       two/two
     </div></div>
   </div>
   <div class="right">
-    <div class="panel" style="background-color: blue"><div>
+    <div class="panel padded" style="background-color: blue"><div>
       one/one
     </div></div>
   </div>
   <div class="center">
-    <div class="panel" style="background-color: green"><div>
+    <div class="panel padded" style="background-color: green"><div>
       one/one
     </div></div>
   </div>
@@ -154,15 +151,15 @@ CSS. Note that it has a fixed 50em width so that layouts don't break.</p>
 
 <div class="sidebar">
   <div class="left sidebar">
-    <div class="panel" style="background-color: red"><div>
+    <div class="panel padded" style="background-color: red"><div>
       one/one
     </div></div>
   </div>
   <div class="right big">
-    <div class="panel" style="background-color: blue"><div>
+    <div class="panel padded" style="background-color: blue"><div>
       one/two
     </div></div>
-    <div class="panel" style="background-color: blue"><div>
+    <div class="panel padded" style="background-color: blue"><div>
       two/two
     </div></div>
   </div>
@@ -173,15 +170,15 @@ CSS. Note that it has a fixed 50em width so that layouts don't break.</p>
 
 <div class="sidebar">
   <div class="left sidebar">
-    <div class="panel" style="background-color: red"><div>
+    <div class="panel padded" style="background-color: red"><div>
       one/two
     </div></div>
-    <div class="panel" style="background-color: red"><div>
+    <div class="panel padded" style="background-color: red"><div>
       two/two
     </div></div>
   </div>
   <div class="right big">
-    <div class="panel" style="background-color: blue"><div>
+    <div class="panel padded" style="background-color: blue"><div>
       one/one
     </div></div>
   </div>
@@ -194,15 +191,15 @@ CSS. Note that it has a fixed 50em width so that layouts don't break.</p>
 
 <div class="sidebar">
   <div class="right sidebar">
-    <div class="panel" style="background-color: blue"><div>
+    <div class="panel padded" style="background-color: blue"><div>
       one/one
     </div></div>
   </div>
   <div class="left big">
-    <div class="panel" style="background-color: red"><div>
+    <div class="panel padded" style="background-color: red"><div>
       one/two
     </div></div>
-    <div class="panel" style="background-color: red"><div>
+    <div class="panel padded" style="background-color: red"><div>
       two/two
     </div></div>
   </div>
@@ -213,20 +210,18 @@ CSS. Note that it has a fixed 50em width so that layouts don't break.</p>
 
 <div class="sidebar">
   <div class="right sidebar">
-    <div class="panel" style="background-color: blue"><div>
+    <div class="panel padded" style="background-color: blue"><div>
       one/two
     </div></div>
-    <div class="panel" style="background-color: blue"><div>
+    <div class="panel padded" style="background-color: blue"><div>
       two/two
     </div></div>
   </div>
   <div class="left big">
-    <div class="panel" style="background-color: red"><div>
+    <div class="panel padded" style="background-color: red"><div>
       one/one
     </div></div>
   </div>
   <span></span>
-</div>
-
 </div>
 

@@ -14,7 +14,7 @@
  *
  * How to structure the document
  * -----------------------------
- * The <body> element must contain div#body-inner and div#page-footer only.
+ * The <body> element must contain div#page-middle and div#page-footer only.
  * Each #top-navigation > ul > li must contain a div.padding.
  *
  * Width is set on .panel.
@@ -50,89 +50,54 @@
  *
  */
 
-/* cleanse the margins so we don't have to worry about a stray (this layout is
- * particularly sensitive) */
-html, body, div { margin: 0; padding: 0; }
-html, body { height: 100%; }
+@media all {
 
-/* choose one or the other... */
-/*
-#body-inner { min-height: 100%; }
-*/
-#body-inner { padding-top: 3em; }
-#page-footer { padding-bottom: 3em; }
+	/* cleanse the margins so we don't have to worry about a stray (this layout is
+	 * particularly sensitive) */
+	html, body, div { margin: 0; padding: 0; }
+	html, body { height: 100%; }
 
-/* center the whole page */
-#body-inner, #page-footer { margin: 0 auto; }
+	#top-navigation { padding-top: 3em; }
+	#page-footer { padding-bottom: 3em; }
 
-/* generic padded container (which must contain another div) */
-.panel.padded > div {
-	padding: 0.15in;
-}
+	/* center the whole page */
+	#top-navigation, #page-middle, #page-footer { max-width: 50em; margin: 0 auto; }
 
-/* Cool CS3 trick: an empty <span> at the end of a div will clear */
-* + span:empty {
-	clear: both;
-	display: block;
-}
+	/* Cool CS3 trick: an empty <span> at the end of a div will clear */
+	* + span:empty {
+		clear: both;
+		display: block;
+	}
 
+	/* Multi-column structural definitions
+	 * -----------------------------------
+	 */
 
+	/* sizes */
+	.multicolumn.two   > .left    > .panel,
+	.multicolumn.two   > .right   > .panel { width: 25em; }
 
-/* Multi-column structural definitions
- * -----------------------------------
- */
+	.multicolumn.three > .left    > .panel,
+	.multicolumn.three > .center  > .panel,
+	.multicolumn.three > .right   > .panel { width: 16.666666666666em; }
 
-#body-inner, #page-footer { width: 50em; }
+	.sidebar           > .sidebar > .panel { width: 14em; }
+	.sidebar           > .big     > .panel { width: 36em; }
 
-/* sizes */
-.multicolumn.two   > .left    > .panel,
-.multicolumn.two   > .right   > .panel { width: 25em; }
+	/* floaty behavior */
+	.multicolumn       > .left,
+	.sidebar           > .left   { float: left; }
+	.multicolumn       > .center { margin: 0 33.333333333333%; }
+	.multicolumn       > .right,
+	.sidebar           > .right  { float: right; }
 
-.multicolumn.three > .left    > .panel,
-.multicolumn.three > .center  > .panel,
-.multicolumn.three > .right   > .panel { width: 16.666666666666em; }
-.sidebar           > .sidebar > .panel { width: 14em; }
-.sidebar           > .big     > .panel { width: 36em; }
+	/* footer */
+	#page-footer p {
+		margin: 0;
+		padding: 0;
+		line-height: 2em;
+		text-align: center;
+		vertical-align: middle;
+	}
 
-/* ensure right item starts at the correct point */
-/* may not be necessary with width instead of width
-.multicolumn.two   > .right   > .panel { margin-left: -25em; }
-.multicolumn.three > .right   > .panel { margin-left: -16.666666666666em; }
-.sidebar           > .right.big     > .panel { margin-left: -36em; }
-.sidebar           > .right.sidebar > .panel { margin-left: -14em; }
-*/
-
-/* behavior */
-.multicolumn       > .left,
-.sidebar           > .left   { float: left; }
-.multicolumn       > .center { margin: 0 33.333333333333%; }
-.multicolumn       > .right,
-.sidebar           > .right  { float: right; }
-
-
-
-/* Footer (just outside #body-inner)
- * ---------------------------------
- */
-
-#body-inner > #body-inside-top { height: 0em; }
-#body-inner > #body-inside-bottom { height: 0em; }
-
-/* this must have the same height so the footer does not overlap with the
- * bottom of #content. */
-#body-inner > #page-footer-background {
-	height: 2.5em; /* includes margin */
-}
-
-#page-footer {
-	margin-top: -2em;
-}
-
-#page-footer p {
-	margin: 0;
-	padding: 0;
-	height: 2em;
-	line-height: 1.75em;
-	text-align: center;
-	vertical-align: middle;
 }

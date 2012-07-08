@@ -1,8 +1,6 @@
 
-/* HORIZONTAL NAVIGATION BARS */
 
 /* cleanse margins so we don't have to worry about stray space */
-#top-navigation > .padding, /* XXX shouldn't be here */
 ul.horizontal-navigation,
 ul.horizontal-navigation ul,
 ul.horizontal-navigation li {
@@ -42,3 +40,8 @@ ul.horizontal-navigation li ul {
 }
 
 #top-navigation hr { clear: both; width: 0; }
+
+@media print {
+#top-navigation { display: none; }
+}
+

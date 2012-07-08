@@ -1,0 +1,9 @@
+---
+title: LyX tips and tricks
+author: Alex Hirzel
+---
+
+I write a lot of LaTeX, but I frequently use LyX for convenience. Over the years, I have accumulated a bag of tricks with LyX; here are some.
+
+To strike through a binary operator, use \not.
+

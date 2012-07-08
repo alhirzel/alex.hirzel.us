@@ -3,46 +3,34 @@ title: Vim Tips
 author: Alex Hirzel
 ---
 
-This is a small collection of tips for the [Vim][vim] text editor, one of my
-tools of choice. Hats off to [the Vim tips wiki][vimtips], but I didn't find
-these there. When I found about most of these, I was in a situation where I
-figured "there *must* be a key for that"; sure enough, there was. Other items
-in this list were added because they seemed useful and I didn't want to forget
-about them.
+<!--dirty dirty html -->
+<img src="/vim_logo.png" style="float:right;margin-left: 1em;margin-top:-4em;width: 10em;">
+
+This is a small collection of tips for the [Vim][vim] text editor, one of my tools of choice. Hats off to [the Vim tips wiki][vimtips], but I didn't find these there originally. When I found about most of these, I was in a situation where I figured "there *must* be a key for that"; sure enough, there was. Other items in this list were added because they seemed useful and I didn't want to forget about them.
 
 Scroll the viewport
-  ~ In Normal mode, <kbd>CTRL+U</kbd> and <kbd>CTRL+D</kbd> scroll half a
-    viewport up and down, respectively. (I don't know how to do this in Insert
-    mode with the default keybindings.)
+  ~ In Normal mode, <kbd>CTRL+U</kbd> and <kbd>CTRL+D</kbd> scroll half a viewport up and down, respectively. (I don't know how to do this in Insert mode with the default keybindings--if you do, let me know too!)
 
 Paste in Insert mode
-  ~ <kbd>CTRL+R "r</kbd>, where <kbd>r</kbd> is the register to use
-    (<kbd>+</kbd> for the system clipboard)
+  ~ <kbd>CTRL+R "r</kbd>, where <kbd>r</kbd> is the register to use; a handy one is <kbd>+</kbd> for the system clipboard. This also works when entering regular expressions!
 
 Copy the word under the cursor when the cursor is in the middle of the word
-  ~ <kbd>yiw</kbd> in Normal mode (also things like <kbd>yi"</kbd> work to grab
-    quoted text from inside, etc.)
+  ~ <kbd>yiw</kbd> in Normal mode (also things like <kbd>yi"</kbd> work to grab quoted text from inside, etc.)
 
 Move the cursor to the top, middle or bottom of the viewport
-  ~ Normal mode: <kbd>H</kbd>, <kbd>M</kbd> and <kbd>L</kbd> (:help Q_vm)
+  ~ Normal mode: <kbd>H</kbd>, <kbd>M</kbd> and <kbd>L</kbd> (<code>:help Q_vm</code>)
 
+Display a list of marks
+  ~ <code>:marks</code>
 
+Execute a shell command and include the results in your document
+  ~ <code>:r!ls</code> (with <code>ls</code> as an example command)
 
-<!--
-asdf
-  ~ :marks (:help Q_ma)
+Also, some help pages are more densely packed with cool tricks than others. Read these:
 
-asdf
-  ~ :help Q_sc
-
-asdf
-  ~ :r!
-
-asdf
-  ~ :ab mtu Michigan Technological University
-
-Put these on your website.
--->
+  * <code>:help Q_ma</code>
+  * <code>:help Q_sc</code>
 
 [vim]: <http://www.vim.org/>
 [vimtips]: <http://vim.wikia.com/wiki/Vim_Tips_Wiki>
+

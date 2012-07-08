@@ -15,21 +15,24 @@
     <link href="/layout.css"          rel="stylesheet" title="Alex's default" type="text/css">
     <link href="/navigation-list.css" rel="stylesheet" title="Alex's default" type="text/css">
     <link href="/appearance.css"      rel="stylesheet" title="Alex's default" type="text/css">
+    <!--temporary shim = printpearance -->
+    <link href="/printpearance.css"   rel="stylesheet" title="Alex's default" type="text/css">
     <!-- include Mootools if necessary-->
   </head>
-  <body>
-    <div id="body-inner">
-      <div id="top-navigation"><div class="contrasting-background">
-        <nav>
-          <ul class="horizontal-navigation">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/hobbies.html">Hobbies</a></li>
-            <li><a href="/cool_software.html">Cool Software List</a></li>
-            <li><a href="/atmel_avr.html">AVR Notes</a></li>
-          </ul>
-        </nav>
-        <span></span>
-      </div></div>
+  <body><div id="body-inner">
+    <div id="top-navigation"><div class="contrasting-background">
+      <nav>
+        <p style="display: none;">The following list has navigation links:</p>
+        <ul class="horizontal-navigation">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/hobbies.html">Hobbies</a></li>
+          <li><a href="/cool_software.html">Cool Software List</a></li>
+          <li><a href="/about_me.html">About</a></li>
+        </ul>
+      </nav>
+      <span></span>
+    </div></div>
+    <div id="page-middle">
       <div id="top-header">
         <header><h1>$title$</h1></header>
       </div>
@@ -55,5 +58,5 @@ $body$
         href="http://johnmacfarlane.net/pandoc/">Pandoc</a>.</small></p>
       </footer>
     </div></div>
-  </body>
+  </div></body>
 </html>

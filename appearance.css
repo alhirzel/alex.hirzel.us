@@ -5,89 +5,128 @@
 /* Colors *********************************************************************
  *============================================================================*/
 
-/* Basically the "side margin" along the central content and the top/bottom
- * stuff including proper backgrounds so rounded corners work */
-body, #page-footer, #body-inner > #top-navigation {
-	background-color: #c0bba8;
+@media screen {
+
+	/* The content background (middle of the sandwich) */
+	#page-middle > * {
+		background-color: white;
+	}
+
+	/* Basically the "side margin" along the central content and the top/bottom
+	 * stuff including proper backgrounds so rounded corners work */
+	/* Cool drop shadow */
+	body, #page-middle, .contrasting-background {
+		background-color: #c0bba8;
+	}
+
+	/* Round corners */
+	#top-navigation > div { border-radius: 1em 1em 0 0; }
+	#page-footer > div { border-radius: 0 0 1em 1em; }
+
+	/* Links get brighter */
+	#content a { color: #24C; }
+	#content a:hover { color: #48F; }
+
+	/* Top navigation and footer background colors and links */
+	.contrasting-background { background-color: #248; color: white; }
+	.contrasting-background a       { background-color: #248;  color: white; }
+	#top-navigation         a:hover { background-color: white; color: black; }
+
 }
 
-/* The content background (middle of the sandwich) */
-#body-inner > * { background-color: white; }
+@media print {
 
-/* Round corners */
-#top-navigation > div { border-radius: 1em 1em 0 0; }
-#page-footer > div { border-radius: 0 0 1em 1em; }
+	a { color: black; text-decoration: underline; }
 
-/* Top navigation and footer background colors and links */
-.contrasting-background { background-color: #248; color: white; }
-.contrasting-background a       { background-color: #248;  color: white; }
-#top-navigation         a:hover { background-color: white; color: black; }
-#top-navigation         a:hover { border-radius: 0.75em 0.75em 0 0; }
+	/* Show link targets after links */
+	#content a:after {
+		content: " (" attr(href) ")";
+		font-size: x-small;
+	}
 
-/* Links get brighter */
-a       { color: #248; }
-a:hover { color: #48F; }
+}
 
 
 
 /* Padding ********************************************************************
  *============================================================================*/
 
-h1, h2, h3, h4, h5, h6 { margin: 0; }
-/*
-p { margin: 0; }
-*/
+/* Generic padded container (which must directly contain another div) */
+@media screen {
 
-#top-navigation > div {
-	padding: 0 1em;
+	/* Common padding rule, see layout.css for details. */
+	.panel.padded > div { padding: 0.15in; }
+
+	/* Fix it for the weird environments */
+	.panel.padded .multicolumn { margin-left: -0.15in; margin-right: -0.15in; }
+	.panel.padded .sidebar .left { margin-left: -0.15in; }
+	.panel.padded .sidebar .right { margin-right: -0.15in; }
 }
 
-#top-navigation a {
-	padding: 0 1em;
+@media all {
 
-	/* center vertically */
-	height: 3em;
-	line-height: 3em;
-	overflow: hidden;
-	text-align: center;
-	vertical-align: middle;
+	/* Since <h1> is used only for the main header of the page, disable it
+	 * elsewhere so the document cannot insert it. */
+	/* TODO: use pandoc to convert header levels down one (h1->h2, h5->h6, etc */
+	h1        { display: none; }
+	header h1 { display: block; }
 }
 
-/* Since <h1> is used only for the main header of the page, disable it
- * elsewhere so the document cannot insert it. */
-h1 { display: none; }
+@media screen {
+	h1, h2, h3, h4, h5, h6 { margin: 0; }
 
-#top-header h1 {
-	text-align: left;
-	display: block;
+	#top-navigation > div {
+		padding: 0 1em;
+	}
 
-	margin: 0;
+	#top-navigation a {
+		padding: 0 1em;
 
-	padding: 0.5em;
-	padding-top: 0.25em;
+		/* center vertically */
+		height: 3em;
+		line-height: 3em;
+		overflow: hidden;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	#top-header h1 {
+		text-align: left;
+
+		margin: 0;
+
+		padding: 0.5em;
+		padding-top: 0.75em;
+	}
 }
 
 
 /* Font faces *****************************************************************
  *============================================================================*/
 
-#top-navigation a,
-#top-navigation a:hover {
-	font-family: "Helvetica", sans-serif;
-	font-weight: bold;
-	text-decoration: none;
-}
+@media all {
+	#top-navigation a,
+	#top-navigation a:hover {
+		font-family: "Helvetica", sans-serif;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	
+	a, a:hover {
+		text-decoration: underline;
+	}
+	
+	body {
+		font-family: "Trebuchet MS", sans-serif;
+	}
+	
+	h1, h2, h3, h4, h5, h6, th, dt {
+		font-family: "Trebuchet MS", sans-serif;
+	}
 
-a, a:hover {
-	text-decoration: underline;
-}
-
-body {
-	font-family: "Trebuchet MS", sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6, th, dt {
-	font-family: "Trebuchet MS", sans-serif;
+	h1 { font-weight: bold;   text-decoration: none;      }
+	h2 { font-weight: normal; text-decoration: underline; }
+	h3 { font-weight: bold;   text-decoration: none;      }
 }
 
 
@@ -95,22 +134,43 @@ h1, h2, h3, h4, h5, h6, th, dt {
 /* Font sizes *****************************************************************
  *============================================================================*/
 
-body { font-size: 90%; }
-
-h1 { font-size: 180%; font-weight: bold;   text-decoration: none;      }
-h2 { font-size: 130%; font-weight: normal; text-decoration: underline; }
-h3 { font-size: 115%; font-weight: bold;   text-decoration: none;      }
+@media all {
+	body { font-size: 90%; }
+	h1 { font-size: 180%; }
+	h2 { font-size: 130%; }
+	h3 { font-size: 115%; }
+}
 
 
 
 /* Special stuff **************************************************************
  *============================================================================*/
 
-/* For use in displaying a warning to the user. Should not show up in print. */
-.panel.userwarning > div {
-	background-color: orange;
-	border-radius: 1em;
-	text-align: center;
-	margin: 0 5em;
+@media paged {
+	#page-footer,
+	#page-footer > * {
+		page-break-before: avoid;
+	}
+}
+
+@media all {
+	p {
+		text-align: justify;
+	}
+}
+
+@media static {
+	.panel.userwarning {
+		display: none;
+	}
+}
+
+@media interactive {
+	.panel.userwarning > div {
+		background-color: orange;
+		border-radius: 1em;
+		text-align: center;
+		margin: 0 5em;
+	}
 }
 
