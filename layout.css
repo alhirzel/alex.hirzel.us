@@ -1,5 +1,6 @@
 /* layout.css
  * ==========
+ * TODO UPDATE THIS DOCUMENTATION
  *
  * Author: Alexander Hirzel <alex@hirzel.us>
  *
@@ -53,7 +54,13 @@
  * particularly sensitive) */
 html, body, div { margin: 0; padding: 0; }
 html, body { height: 100%; }
-body > #body-inner { min-height: 100%; }
+
+/* choose one or the other... */
+/*
+#body-inner { min-height: 100%; }
+*/
+#body-inner { padding-top: 3em; }
+#page-footer { padding-bottom: 3em; }
 
 /* center the whole page */
 #body-inner, #page-footer { margin: 0 auto; }
@@ -108,13 +115,24 @@ body > #body-inner { min-height: 100%; }
  * ---------------------------------
  */
 
+#body-inner > #body-inside-top { height: 0em; }
+#body-inner > #body-inside-bottom { height: 0em; }
+
 /* this must have the same height so the footer does not overlap with the
  * bottom of #content. */
-#body-inner > #page-footer-placeholder {
-	height: 3em;
+#body-inner > #page-footer-background {
+	height: 2.5em; /* includes margin */
 }
 
-#page-footer.panel.padded {
-	height: 3em;
-	margin-top: -3em;
+#page-footer {
+	margin-top: -2em;
+}
+
+#page-footer p {
+	margin: 0;
+	padding: 0;
+	height: 2em;
+	line-height: 1.75em;
+	text-align: center;
+	vertical-align: middle;
 }

@@ -18,43 +18,42 @@
     <!-- include Mootools if necessary-->
   </head>
   <body>
-
-<!-- this part needs to be 100% height to push the footer down -->
-<div id="body-inner">
-  <header>
-    <div id="top-header"><h1>$title$</h1></div>
-  </header>
-
-  <nav>
-    <div id="top-navigation">
-      <ul class="horizontal-navigation">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/hobbies.html">Hobbies</a></li>
-        <li><a href="/cool_software.html">Cool Software</a></li>
-        <li><a href="/atmel_avr.html">AVR Notes</a></li>
-      </ul>
-      <span></span>
-    </div>
-  </nav>
-
-  <article>
-<!--[if IE 6]>
-    <div class="panel" id="ie6-warning"><div class="padding">
-      <p>Are you using Internet Explorer 6? You should <a href="http://getfirefox.com">upgrade your browser</a>.</p>
-    </div></div>
-<![endif]-->
-    <div class="panel padded" id="content"><div>
+    <div id="body-inner">
+      <div id="top-navigation"><div class="contrasting-background">
+        <nav>
+          <ul class="horizontal-navigation">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/hobbies.html">Hobbies</a></li>
+            <li><a href="/cool_software.html">Cool Software List</a></li>
+            <li><a href="/atmel_avr.html">AVR Notes</a></li>
+          </ul>
+        </nav>
+        <span></span>
+      </div></div>
+      <div id="top-header">
+        <header><h1>$title$</h1></header>
+      </div>
+      <!--[if IE 6]>
+      <div class="panel padded userwarning" id="ie6-warning"><div>
+        <p>According to your User Agent string you using Internet Explorer 6.</p>
+        <p>You should <a href="http://getfirefox.com">upgrade your browser</a>.</p>
+      </div></div>
+      <![endif]-->
+      <div class="panel padded" id="content"><div>
+        <article>
 $body$
+        </article>
+      </div></div>
+      <div id="page-footer-background"></div>
+    </div>
+
+    <div id="page-footer"><div class="contrasting-background">
+      <footer>
+        <p><small>Website content and design by <a
+        href="/about_me.html">me</a>!&nbsp;&nbsp;&nbsp;Special thanks to <a
+        href="http://jaspervdj.be/hakyll/">Hakyll</a> and <a
+        href="http://johnmacfarlane.net/pandoc/">Pandoc</a>.</small></p>
+      </footer>
     </div></div>
-  </article>
-  <div id="page-footer-placeholder"></div>
-</div>
-
-<footer>
-  <div class="panel padded" id="page-footer"><div>
-    <small>Copyright 2011 Alexander Hirzel &lt;email@dot.com&gt;.</small>
-  </div></div>
-</footer>
-
   </body>
 </html>

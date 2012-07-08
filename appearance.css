@@ -1,116 +1,116 @@
 
-/* Colors
- * ====== */
 
-/* side margin */
-body { background-color: #ddd; }
 
-/* content */
-#body-inner { background-color: white; }
 
-/* header */
-#top-header h1 { background-color: #248; color: white; }
+/* Colors *********************************************************************
+ *============================================================================*/
 
-/* navigation bar */
-#top-navigation { background-color: #248; }
-#top-navigation a       { background-color: #248;  border-color: #248; color: white; }
-#top-navigation a:hover { background-color: white; border-color: black; color: black; }
-
-/* links */
-p a { color: #248; }
-
-/* footer background */
-#page-footer.panel.padded {
-	-moz-border-radius: 1em 1em 0 0;
-	background-color: #248;
-	color: white;
+/* Basically the "side margin" along the central content and the top/bottom
+ * stuff including proper backgrounds so rounded corners work */
+body, #page-footer, #body-inner > #top-navigation {
+	background-color: #c0bba8;
 }
 
+/* The content background (middle of the sandwich) */
+#body-inner > * { background-color: white; }
+
+/* Round corners */
+#top-navigation > div { border-radius: 1em 1em 0 0; }
+#page-footer > div { border-radius: 0 0 1em 1em; }
+
+/* Top navigation and footer background colors and links */
+.contrasting-background { background-color: #248; color: white; }
+.contrasting-background a       { background-color: #248;  color: white; }
+#top-navigation         a:hover { background-color: white; color: black; }
+#top-navigation         a:hover { border-radius: 0.75em 0.75em 0 0; }
+
+/* Links get brighter */
+a       { color: #248; }
+a:hover { color: #48F; }
 
 
 
-
-
-
+/* Padding ********************************************************************
+ *============================================================================*/
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
+/*
+p { margin: 0; }
+*/
 
-
-/* rounded corner effect */
-#top-navigation a:hover { -moz-border-radius: 0.4em 0.4em 0 0; }
-#top-navigation a {
-	border: 1px solid black;
-	border-bottom: none;
-	border-color: #248;
-	margin-left: 8px;
-	font-weight: bold;
-	font-family: "Verdana", sans-serif;
-	padding: 0.25em 0.75em;
-	padding-bottom: 0;
-	text-decoration: none;
+#top-navigation > div {
+	padding: 0 1em;
 }
 
-/* h1 is used for the header of the page only */
-h1 { display: none; }
-#top-header h1 {
-	display: block;
+#top-navigation a {
+	padding: 0 1em;
 
-	font-size: 200%;
-	font-weight: bold;
-	text-align: right;
-	font-family: "Verdana", sans-serif;
+	/* center vertically */
+	height: 3em;
+	line-height: 3em;
+	overflow: hidden;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/* Since <h1> is used only for the main header of the page, disable it
+ * elsewhere so the document cannot insert it. */
+h1 { display: none; }
+
+#top-header h1 {
+	text-align: left;
+	display: block;
 
 	margin: 0;
 
-	padding: 0.25em 0.5em;
-	padding-bottom: 0.5em;
+	padding: 0.5em;
+	padding-top: 0.25em;
 }
 
 
+/* Font faces *****************************************************************
+ *============================================================================*/
 
+#top-navigation a,
+#top-navigation a:hover {
+	font-family: "Helvetica", sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+}
 
+a, a:hover {
+	text-decoration: underline;
+}
 
-
-/* Set color scheme */
-/*
 body {
-	background-color: #c0bba8;
-}
-#header {
-	background-color: #676a73;
-}
-#header > h1 {
-	background-color: #a75d04;
-	color: #e9f1f3;
-	padding: 1ex 0.5em;
-}
-#content {
-	background-color: #95acbe;
-}
-*/
-
-
-/* Set header fonts to sans-serif, other fonts to serif for printing and sans-serif for screen */
-body {
-	font-family: "Arial", sans-serif;
+	font-family: "Trebuchet MS", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, th, dt {
-	font-family: sans-serif;
+	font-family: "Trebuchet MS", sans-serif;
 }
 
 
-/* COLORS:
-676a73
-95acbe
-e9f1f3
-c0bba8
-a75d04
-http://dailyduluth.wordpress.com/2009/10/
 
-#2e4358
-#a3bfd9
-#f2dc99
-#f2c48d
-#d9a689
-*/
+/* Font sizes *****************************************************************
+ *============================================================================*/
+
+body { font-size: 90%; }
+
+h1 { font-size: 180%; font-weight: bold;   text-decoration: none;      }
+h2 { font-size: 130%; font-weight: normal; text-decoration: underline; }
+h3 { font-size: 115%; font-weight: bold;   text-decoration: none;      }
+
+
+
+/* Special stuff **************************************************************
+ *============================================================================*/
+
+/* For use in displaying a warning to the user. Should not show up in print. */
+.panel.userwarning > div {
+	background-color: orange;
+	border-radius: 1em;
+	text-align: center;
+	margin: 0 5em;
+}
+
