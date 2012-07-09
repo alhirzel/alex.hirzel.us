@@ -1,4 +1,4 @@
-
+$page_surrounding: #c0bba8;
 
 
 
@@ -16,7 +16,7 @@
 	 * stuff including proper backgrounds so rounded corners work */
 	/* Cool drop shadow */
 	body, #page-middle, .contrasting-background {
-		background-color: #c0bba8;
+		background-color: $page_surrounding;
 	}
 
 	/* Round corners */
