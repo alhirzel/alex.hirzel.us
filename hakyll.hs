@@ -78,10 +78,10 @@ upDirRoute = customRoute $ upDir . toFilePath
 
 -- | Chops off the top-level directory from a @FilePath@.
 --
--- >>> upDir' "/foo/bar/baz"
+-- >>> upDir "/foo/bar/baz"
 -- "/bar/baz"
 --
--- >>> upDir' "foo/bar/baz"
+-- >>> upDir "foo/bar/baz"
 -- "bar/baz"
 upDir :: FilePath -> FilePath
 upDir = joinPath . dropTopDir . splitDirectories
