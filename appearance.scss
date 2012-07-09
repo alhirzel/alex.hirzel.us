@@ -1,4 +1,7 @@
 $page_surrounding: #c0bba8;
+$head_foot_color:  #248;
+$link_color:       #24C;
+$link_hover_color: $link_color*2;
 
 
 
@@ -24,13 +27,31 @@ $page_surrounding: #c0bba8;
 	#page-footer > div { border-radius: 0 0 1em 1em; }
 
 	/* Links get brighter */
-	#content a { color: #24C; }
-	#content a:hover { color: #48F; }
+	#content a       { color: $link_color; }
+	#content a:hover { color: $link_hover_color; }
 
 	/* Top navigation and footer background colors and links */
-	.contrasting-background { background-color: #248; color: white; }
-	.contrasting-background a       { background-color: #248;  color: white; }
-	#top-navigation         a:hover { background-color: white; color: black; }
+	.contrasting-background   { background-color: $head_foot_color; color: white; }
+	.contrasting-background a { background-color: $head_foot_color; color: white; }
+
+	#top-navigation {
+
+		/* Special rule for top-level because the transparency misbehaves */
+		ul.horizontal-navigation > li:hover > a {
+			background-color: white;
+		}
+
+		/* All (i.e. subsequent levels) */
+		li:hover > a {
+			color: black;
+			background-color: rgba(255, 255, 255, 0.90);
+
+			border: 1px solid black; margin: -1px;
+
+			border-radius: 2px;
+			box-shadow: 0 0 5px $head_foot_color;
+		}
+	}
 
 }
 

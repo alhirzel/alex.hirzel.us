@@ -23,8 +23,29 @@
         <ul class="horizontal-navigation">
           <li><a href="/index.html">Home</a></li>
           <li><a href="/hobbies.html">Hobbies</a></li>
-          <li><a href="/cool_software.html">Cool Software List</a></li>
+          <li><a href="/cool_software.html">Cool Software List</a><ul>
+            <li><a href="/vim_tips.html">Vim tips</a></li>
+          </ul></li>
           <li><a href="/about_me.html">About</a></li>
+<!--
+<li><a href="asdf">one</a><ul>
+	<li><a href="asdf">two</a></li>
+	<li><a href="asdf">two</a><ul>
+		<li><a href="asdf">three1</a></li>
+		<li><a href="asdf">three</a><ul>
+			<li><a href="asdf">four</a></li>
+			<li><a href="asdf">four</a><ul>
+				<li><a href="asdf">five</a></li>
+				<li><a href="asdf">five</a></li>
+				<li><a href="asdf">five</a></li>
+			</ul></li>
+			<li><a href="asdf">four</a></li>
+		</ul></li>
+		<li><a href="asdf">three2</a></li>
+	</ul></li>
+	<li><a href="asdf">two</a></li>
+</ul></li>
+-->
         </ul>
       </nav>
       <span></span>
