@@ -3,7 +3,7 @@ title: CSS Test Page
 author: Alex Hirzel
 ---
 
-This is the page Alex keeps around to test his rapidly-growing library of CSS. Note that it has a fixed 50em width so that layouts don't break.
+This is the page Alex keeps around to test his rapidly-growing library of CSS. Non-compressed versions of the sources of this site are available.
 
 
 <h3>Horizontal Navigation</h3>
