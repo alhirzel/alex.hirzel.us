@@ -4,67 +4,81 @@
 
 -- Resources:
 --   https://github.com/jaspervdj/hakyll-examples
+--   http://citationneeded.me/
 
 -- Areas of future work:
 --   https://groups.google.com/d/topic/hakyll/p-zk3MFQ_ts/discussion
 
 {-# LANGUAGE OverloadedStrings #-}
+
+import Prelude hiding (id)
 import Hakyll
 import Control.Arrow
+import Control.Applicative
+import Control.Monad
 import System.FilePath
 import Data.Monoid
 import Text.Pandoc
 
 
 
-config :: HakyllConfiguration
 config = defaultHakyllConfiguration {
   deployCommand = "rsync -rv htdocs/ nfsn:/home/public",
   destinationDirectory = "htdocs"
 }
 
 
--- TODO: add something here to populate siteKeys
-bestCompilerEver =
-  pageCompilerWith p w >>>
-  applyTemplateCompiler "default.mt" >>>
-  relativizeUrlsCompiler
-  where
-    w = defaultWriterOptions {
-          writerHtml5 = True }
-    p = defaultParserState
-
 
 main = hakyllWith config $ do
 
-  match "*.css" $ do
-    route idRoute
-    compile copyFileCompiler
+    -- Use empty favicon.ico and robots.txt for performance reasons on NFSN
+    emptyfile "favicon.ico"
+    emptyfile "robots.txt"
 
-  match "*.mt" $ do
-    compile templateCompiler
+    ["*.mt"]         --> [template]
+    ["pages/*.page"] --> [markdown]
+    ["*.scss"]       --> [scss]
+    ["pages/*.jpg"]  --> [static]
+    ["pages/*.png"]  --> [static]
+    ["*.css"]        --> [css]
+    ["favicon.ico"]  --> [static]
+    ["robots.txt"]   --> [static]
 
-  match "pages/*.page" $ do
-    route $ upDirRoute `composeRoutes` setExtension ".html"
-    compile bestCompilerEver
+  where fs --> rs = sequence (fs <**> rs)
+        emptyfile fn = create fn $ (constA mempty :: Compiler () String)
 
-  match "pages/*.tex" $ do
-    route $ upDirRoute `composeRoutes` setExtension ".html"
-    compile bestCompilerEver
 
-  match "pages/*.png" $ do
-    route upDirRoute
-    compile copyFileCompiler
 
-  match "pages/*.jpg" $ do
-    route upDirRoute
-    compile copyFileCompiler
+template :: Pattern (Identifier Template) -> RulesM ()
+template pat = void $ match pat $ do
+  compile templateCompiler
 
-  -- create empty favicon.ico and robots.txt (for performance on NearlyFreeSpeech)
-  match "favicon.ico" $ route idRoute
-  create "favicon.ico" $ (constA mempty :: Compiler () String)
-  match "favicon.ico" $ route idRoute
-  create "favicon.ico" $ (constA mempty :: Compiler () String)
+static :: Pattern (Page String) -> RulesM ()
+static pat = void $ match pat $ do
+  route idRoute
+  compile copyFileCompiler
+
+css :: Pattern (Page String) -> RulesM ()
+css pattern = void $ match pattern $ do
+               route idRoute
+               compile $ getResourceString >>> arr compressCss
+
+scss :: Pattern (Page String) -> RulesM ()
+scss pattern = void $ match pattern $ do
+                route (setExtension ".css")
+                compile $ getResourceString
+                  >>> unixFilter "scss" ["-s"]
+                  >>> arr compressCss
+
+markdown :: Pattern (Page String) -> RulesM ()
+markdown pat = void $ match pat $ do
+  route $ upDirRoute `composeRoutes` setExtension ".html"
+  compile $ pageCompilerWith pstate wstate
+            >>> applyTemplateCompiler template
+            >>> relativizeUrlsCompiler
+    where template = "default.mt"
+          wstate = defaultWriterOptions { writerHtml5 = True }
+          pstate = defaultParserState
 
 
 
