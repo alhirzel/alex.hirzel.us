@@ -15,9 +15,6 @@
     <link href="/layout.css"          rel="stylesheet" title="Alex's default" type="text/css">
     <link href="/navigation-list.css" rel="stylesheet" title="Alex's default" type="text/css">
     <link href="/appearance.css"      rel="stylesheet" title="Alex's default" type="text/css">
-    <!--temporary shim = printpearance -->
-    <link href="/printpearance.css"   rel="stylesheet" title="Alex's default" type="text/css">
-    <!-- include Mootools if necessary-->
   </head>
   <body><div id="body-inner">
     <div id="top-navigation"><div class="contrasting-background">

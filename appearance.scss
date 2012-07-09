@@ -36,7 +36,7 @@ $page_surrounding: #c0bba8;
 
 @media print {
 
-	a { color: black; text-decoration: underline; }
+	a, a:visited { color: black; text-decoration: underline; }
 
 	/* Show link targets after links */
 	#content a:after {
@@ -157,6 +157,15 @@ $page_surrounding: #c0bba8;
 	p {
 		text-align: justify;
 	}
+}
+
+@media print {
+	/* save horizontal space */
+	.panel.padded:not(.sidebar, .multicolumn) > div {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	/* TODO: fix .multicolumn, .sidebar */
 }
 
 @media static {
