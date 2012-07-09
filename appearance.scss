@@ -59,11 +59,12 @@ $link_hover_color: $link_color*2;
 	}
 }
 
+/* In print, show link targets after links and color links to match surrounding
+ * text. */
 @media print {
 
-	a, a:visited { color: black; text-decoration: underline; }
+	a, a:visited { color: inherit; text-decoration: underline; }
 
-	/* Show link targets after links */
 	#content a:after {
 		content: " (" attr(href) ")";
 		font-size: x-small;
