@@ -89,4 +89,4 @@ upDir = joinPath . dropTopDir . splitDirectories
     dropTopDir ("/":x2:xs) = "/" : tail xs
     dropTopDir (x1 :x2:xs) = x2:xs
 
--- vim:et:sw=2
+-- vim:set et sw=2:
