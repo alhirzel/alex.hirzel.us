@@ -1,33 +1,18 @@
 HAKYLL=./hakyll
 
-DEFAULT: build
-
-
-
-# catch updates to these files
-PAGES: $(wildcard *.html)
-TEMPLATES: $(wildcard *.mt)
-
-
-
-# actions
-deploy: build
-	rsync -rv htdocs/ nfsn:/home/public
-
-build: ${HAKYLL} PAGES TEMPLATES
+build: ${HAKYLL}
 	${HAKYLL} rebuild
 
 clean:
-	-${HAKYLL} clean
-	rm -f ${HAKYLL}
+	${HAKYLL} clean
+	rm ${HAKYLL}
 
+deploy: ${HAKYLL}
+	${HAKYLL} deploy
 
-
-# build commands for the hakyll script
 ${HAKYLL}: hakyll.hs
 	ghc --make hakyll.hs
 	rm -f hakyll.o hakyll.hi
 
+.PHONY: build clean deploy
 
-
-.PHONY: PAGES TEMPLATES update up build bu clean cl

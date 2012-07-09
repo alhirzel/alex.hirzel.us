@@ -19,7 +19,7 @@ import Text.Pandoc
 
 config :: HakyllConfiguration
 config = defaultHakyllConfiguration {
-  deployCommand = "make deploy",
+  deployCommand = "rsync -rv htdocs/ nfsn:/home/public",
   destinationDirectory = "htdocs"
 }
 
