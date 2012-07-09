@@ -3,6 +3,9 @@ $head_foot_color:  #248;
 $link_color:       #24C;
 $link_hover_color: $link_color*2;
 
+/* TODO: use the following to improve this stylesheet:
+ * http://robertnyman.com/2010/01/11/css-background-transparency-without-affecting-child-elements-through-rgba-and-filters/
+ */
 
 
 /* Colors *********************************************************************
@@ -37,22 +40,23 @@ $link_hover_color: $link_color*2;
 	#top-navigation {
 
 		/* Special rule for top-level because the transparency misbehaves */
-		ul.horizontal-navigation > li:hover > a {
-			background-color: white;
-		}
+		ul.horizontal-navigation > li       > a { background-color: inherit; }
+		ul.horizontal-navigation > li:hover > a { background-color: white; }
 
 		/* All (i.e. subsequent levels) */
-		li:hover > a {
-			color: black;
-			background-color: rgba(255, 255, 255, 0.90);
+		li {
+			&       > a { background-color: rgba(34, 68, 136, 0.80); }
+			&:hover > a { background-color: rgba(255, 255, 255, 0.80); }
+			&:hover > a {
+				color: black;
 
-			border: 1px solid black; margin: -1px;
+				border: 1px solid black; margin: -1px;
 
-			border-radius: 2px;
-			box-shadow: 0 0 5px $head_foot_color;
+				border-radius: 2px;
+				box-shadow: 0 0 5px $head_foot_color;
+			}
 		}
 	}
-
 }
 
 @media print {
