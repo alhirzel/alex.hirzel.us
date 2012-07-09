@@ -55,7 +55,7 @@ template pat = void $ match pat $ do
 
 static :: Pattern (Page String) -> RulesM ()
 static pat = void $ match pat $ do
-  route idRoute
+  route upDirRoute
   compile copyFileCompiler
 
 css :: Pattern (Page String) -> RulesM ()
@@ -102,5 +102,6 @@ upDir = joinPath . dropTopDir . splitDirectories
   where
     dropTopDir ("/":x2:xs) = "/" : tail xs
     dropTopDir (x1 :x2:xs) = x2:xs
+    dropTopDir xs          = xs
 
 -- vim:set et sw=2:
