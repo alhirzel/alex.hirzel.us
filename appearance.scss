@@ -189,18 +189,16 @@ $link_hover_color: $link_color*2;
 	/* TODO: fix .multicolumn, .sidebar */
 }
 
-@media static {
-	.panel.userwarning {
-		display: none;
-	}
+.panel.userwarning > div {
+	background-color: orange;
+	border-radius: 1em;
+	text-align: center;
+	margin: 0 5em;
 }
 
-@media interactive {
-	.panel.userwarning > div {
-		background-color: orange;
-		border-radius: 1em;
-		text-align: center;
-		margin: 0 5em;
+@media print {
+	.panel.userwarning {
+		display: none;
 	}
 }
 
