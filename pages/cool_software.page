@@ -14,6 +14,9 @@ LaTeX
 [Vim]
   ~ A great text editor and my editor of choice. I am a somewhat egotistical user who takes pride in knowing more tricks than my friends. I am starting to maintain a [page of Vim tips](vim_tips.html) for the interested.
 
+[Freemind]
+  ~ Software for creating and maintaining [mind maps], a highly effective tool for organizing thoughts or projects. Freemind has a very intuitive set of default keybindings that allow you to "just use" the software from day 0.
+
 <!--
 Haskell
   ~ ()
@@ -51,6 +54,7 @@ FreeBSD
 
 
 [Beamer]: <https://bitbucket.org/rivanvx/beamer/wiki/Home>
+[Freemind]: <http://freemind.sourceforge.net/>
 [ieeetran.sty]: <http://www.michaelshell.org/tex/ieeetran/>
 [resume]: <javascript:alert('have not uploaded my resume yet');return false;>
 [Sweave]: <http://www.stat.uni-muenchen.de/~leisch/Sweave/>
