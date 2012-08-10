@@ -31,6 +31,9 @@ Also, some help pages are more densely packed with cool tricks than others. Read
   * <code>:help Q_ma</code>
   * <code>:help Q_sc</code>
 
+Other helpful posts include [Coming Home to Vim].
+
 [vim]: <http://www.vim.org/>
 [vimtips]: <http://vim.wikia.com/wiki/Vim_Tips_Wiki>
+[Coming Home to Vim]: <http://stevelosh.com/blog/2010/09/coming-home-to-vim/>
 
