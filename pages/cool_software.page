@@ -52,6 +52,9 @@ FreeBSD
 [AltDrag]
   ~ Window resizing in Microsoft Windows is annoying once you're used to it on &lt;insert name of other GUI here&gt;. This helps.
 
+[QuickSynergy]
+  ~ Allows for easy configuration of [Synergy] using a GUI.
+
 
 [Beamer]: <https://bitbucket.org/rivanvx/beamer/wiki/Home>
 [FreeMind]: <http://freemind.sourceforge.net/>
@@ -64,6 +67,8 @@ FreeBSD
 [LXAppearance]: <http://wiki.lxde.org/en/LXAppearance>
 [AltDrag]: <http://code.google.com/p/altdrag/>
 [Web2PDFConvert.com]: <http://web2pdfconvert.com/>
+[QuickSynergy]: <http://code.google.com/p/quicksynergy/>
+[Synergy]: <http://synergy-foss.org/>
 
 
 
