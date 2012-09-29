@@ -1,0 +1,15 @@
+---
+title: LaTeX tips
+author: Alexander Hirzel
+---
+
+Useful packages
+---------------
+
+  * The float package with the [H] option allows you to have firm "here"
+    placement of figures and tables.
+
+  * The environ package simplifes the implementation of new LaTeX environments
+    by providing a `\newcommand`-esque method of defining environments using
+    `#1`, `#2` and others as well as `\BODY`.
+
