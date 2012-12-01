@@ -1,0 +1,77 @@
+
+
+/* Set page up as one centered column of width 50em */
+body {
+	margin: 0 auto;
+	max-width: 50em;
+}
+
+
+/* Set color scheme */
+body {
+	background-color: #c0bba8;
+}
+#header {
+	background-color: #676a73;
+}
+#header > h1 {
+	background-color: #a75d04;
+	color: #e9f1f3;
+	padding: 1ex 0.5em;
+}
+#content {
+	background-color: #95acbe;
+}
+
+
+/* Set header fonts to sans-serif, other fonts to serif */
+body {
+	font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, th, dt {
+	font-family: sans-serif;
+}
+
+
+
+
+/* HELP ON DEBUGGING */
+#header ul { color: black; }
+#header > ul > li > ul {
+	background-color: #c0bba8;
+	border: 2px solid #a75d04;
+	-moz-border-radius: 0 10px 10px 0
+}
+/* Make all menu links black and remove underlines */
+#header > ul   li > a {
+	color: black;
+	text-decoration: none;
+}
+
+/* Assign orange background to horizontal menu items when
+ * hovered or menu is open. Also make menus translucent. */
+#header > ul > li:hover {
+	background-color: #a75d04;
+	opacity: 0.9;
+}
+
+/* Assign white text to horizontal menu items when hovered
+ * (but not when submenu is open) */
+#header > ul > li > a:hover {
+	color: #e9f1f3;
+}
+
+/* Links on popped-up menus underline when hovered. */
+#header > ul > li li > a:hover {
+	text-decoration: underline;
+}
+
+/* COLORS:
+676a73
+95acbe
+e9f1f3
+c0bba8
+a75d04
+http://dailyduluth.wordpress.com/2009/10/
+*/
