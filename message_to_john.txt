@@ -1,0 +1,9 @@
+I had been using this interface to pre-populate the KeyTable within ParserState
+with a list of pages of my site; this makes linking between pages of my site
+much easier. (Specifically, because the references are pre-defined when each
+page is parsed, I do not have to define them on each page. Obvious maintenance
+implications, etc.)
+
+Do you have any advice on how I can work around this change and preserve my use case?
+
+Alex

@@ -1,0 +1,13 @@
+---
+title: Setting up tt-rss
+author: Alex Hirzel
+---
+
+As a replacement for Google Reader (which was given a sunset date in a few
+months), I set up `tt-rss` to run on a virtual machine on my file server.
+`tt-rss` is similar in functionality to Google Reader, and I made the decision
+to switch to a self-hosted solution because no good alternatives to Google
+Reader existed at the time Google announced the retirement of Reader.
+
+
+

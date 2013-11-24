@@ -5,80 +5,77 @@
 -- Resources:
 --   https://github.com/jaspervdj/hakyll-examples
 --   http://citationneeded.me/
+--   http://jaspervdj.be/hakyll/tutorials/hakyll-3-to-hakyll4-migration-guide.html
+--   http://sigkill.dk/programs/sigkill.html
 
 -- Areas of future work:
 --   https://groups.google.com/d/topic/hakyll/p-zk3MFQ_ts/discussion
 
-{-# LANGUAGE OverloadedStrings #-}
-
-import Prelude hiding (id)
 import Hakyll
-import Control.Arrow
-import Control.Applicative
-import Control.Monad
 import System.FilePath
 import Data.Monoid
+import Control.Applicative ((<$>))
 import Text.Pandoc
 
 
 
-config = defaultHakyllConfiguration {
+config = defaultConfiguration {
   deployCommand = "rsync -rv htdocs/ nfsn:/home/public",
   destinationDirectory = "htdocs"
 }
 
 
 
-main = hakyllWith config $ do
+main :: IO ()
+main = let s --> r = match (fromGlob s) r
+        in hakyllWith config $ do
 
-    -- Use empty favicon.ico and robots.txt for performance reasons on NFSN
-    emptyfile "favicon.ico"
-    emptyfile "robots.txt"
+  -- Use empty favicon.ico and robots.txt for performance reasons on NFSN
+  -- (http://blog.nearlyfreespeech.net/2009/06/16/quick-wordpress-performance-tip-create-a-favicon/)
+  emptyfile "favicon.ico"
+  emptyfile "robots.txt"
 
-    ["*.mt"]         --> [template]
-    ["pages/*.page"] --> [markdown]
-    ["*.scss"]       --> [scss]
-    ["pages/*.jpg"]  --> [static]
-    ["pages/*.png"]  --> [static]
-    ["*.css"]        --> [css]
-    ["favicon.ico"]  --> [static]
-    ["robots.txt"]   --> [static]
-
-  where fs --> rs = sequence (fs <**> rs)
-        emptyfile fn = create fn $ (constA mempty :: Compiler () String)
-
+  -- List out the remaining file types
+  "pages/**.page" --> markdown upDirRoute
+  "pages/**.jpg"  --> static upDirRoute
+  "pages/**.png"  --> static upDirRoute
+  "*.css"         --> css
+  "*.scss"        --> sassycss
+  "*.mt"          --> template
 
 
-template :: Pattern (Identifier Template) -> RulesM ()
-template pat = void $ match pat $ do
-  compile templateCompiler
 
-static :: Pattern (Page String) -> RulesM ()
-static pat = void $ match pat $ do
-  route upDirRoute
-  compile copyFileCompiler
+emptyfile :: String -> Rules ()
+emptyfile fn = create [fromFilePath fn] $ do route idRoute
+                                             compile $ makeItem ""
 
-css :: Pattern (Page String) -> RulesM ()
-css pattern = void $ match pattern $ do
-               route idRoute
-               compile $ getResourceString >>> arr compressCss
+template   = do compile templateCompiler
 
-scss :: Pattern (Page String) -> RulesM ()
-scss pattern = void $ match pattern $ do
-                route (setExtension ".css")
-                compile $ getResourceString
-                  >>> unixFilter "scss" ["-s"]
-                  >>> arr compressCss
+static r   = do route   r
+                compile copyFileCompiler
 
-markdown :: Pattern (Page String) -> RulesM ()
-markdown pat = void $ match pat $ do
-  route $ upDirRoute `composeRoutes` setExtension ".html"
-  compile $ pageCompilerWith pstate wstate
-            >>> applyTemplateCompiler template
-            >>> relativizeUrlsCompiler
-    where template = "default.mt"
-          wstate = defaultWriterOptions { writerHtml5 = True }
-          pstate = defaultParserState
+css        = do route   idRoute
+                compile compressCssCompiler
+
+sassycss   = do route   $ setExtension ".css"
+                compile $ getResourceString >>=
+                          withItemBody (unixFilter "scss" ["-s"]) >>=
+                          return . fmap compressCss
+
+markdown r = do route   $ r `composeRoutes` setExtension ".html"
+                compile $ myPandocCompiler
+                          >>= loadAndApplyTemplate template defaultContext
+                          >>= relativizeUrls
+                  where template = fromFilePath "default.mt"
+
+
+
+myPandocCompiler :: Compiler (Item String)
+myPandocCompiler = cached cacheName $ writePandocWith wopt . (fmap $ readMarkdown ropt) <$> getResourceBody
+  where
+    cacheName = "Hakyll.Web.Page.pageCompilerWithPandoc"
+    ropt = defaultHakyllReaderOptions { readerInitialURLs = [("mtu", "mtu", "mtu")] }
+    wopt = defaultHakyllWriterOptions
 
 
 
