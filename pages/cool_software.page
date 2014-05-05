@@ -59,6 +59,10 @@ SuperCopier
 [QuickSynergy]
   ~ Allows for easy configuration of [Synergy] using a GUI.
 
+[Evince]
+  ~ Fast PDF viewer for Windows. It's good to have Acrobat Reader installed
+    anyway because some PDFs only seem to print properly in it.
+
 
 [Beamer]: <https://bitbucket.org/rivanvx/beamer/wiki/Home>
 [FreeMind]: <http://freemind.sourceforge.net/>
@@ -115,6 +119,7 @@ Antivirus software
 [ComboFix.exe]: <http://download.bleepingcomputer.com/sUBs/ComboFix.exe>
 [Defraggler]: <http://www.piriform.com/defraggler/download/standard>
 [Electric Sheep]: <http://electricsheep.org/download>
+[Evince]: <https://wiki.gnome.org/Apps/Evince/Downloads>
 [Firebug]: <https://addons.mozilla.org/en-US/firefox/addon/firebug/>
 [Firefox]: <http://www.mozilla.org/en-US/firefox/all.html>
 [Flash]: <http://get.adobe.com/flashplayer/completion/?installer=Flash_Player_11_for_Internet_Explorer_%2832_bit%29>
